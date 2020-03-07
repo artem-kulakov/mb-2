@@ -1,26 +1,67 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "js-validate form-signin p-5"}) do |f| %>
+  <!-- Logo -->
+  <div class="text-center">
+    <%= link_to root_path do %>
+      <img class="mb-3" src="../../assets/svg/logos/logo-short.svg" alt="Logo" width="60" height="60">
+    <% end %>
   </div>
+  <!-- End Logo -->
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <!-- Title -->
+  <div class="text-center mb-4">
+    <h1 class="h3 mb-0">Please sign in</h1>
+    <p>Signin to manage your account.</p>
   </div>
+  <!-- End Title -->
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+  <!-- Input -->
+  <div class="js-form-message mb-3">
+    <div class="js-focus-state input-group form">
+      <div class="input-group-prepend form__prepend">
+        <span class="input-group-text form__text">
+          <i class="fa fa-user form__text-inner"></i>
+        </span>
+      </div>
+      <%= f.email_field :email, class: "form-control form__input", required: true, placeholder: "Email", 'aria-label': "Email", 'data-msg': "Please enter a valid email address.", 'data-error-class': "u-has-error", 'data-success-class': "u-has-success" %>
     </div>
-  <% end %>
+  </div>
+  <!-- End Input -->
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <!-- Input -->
+  <div class="js-form-message mb-3">
+    <div class="js-focus-state input-group form">
+      <div class="input-group-prepend form__prepend">
+        <span class="input-group-text form__text">
+          <i class="fa fa-lock form__text-inner"></i>
+        </span>
+      </div>
+      <%= f.password_field :password, class: "form-control form__input", required: true, placeholder: "Password", 'aria-label': "Password", 'data-msg': "Your password is invalid. Please try again.", 'data-error-class': "u-has-error", 'data-success-class': "u-has-success" %>
+    </div>
+  </div>
+  <!-- End Input -->
+
+  <div class="row mb-3">
+    <div class="col-6">
+      <!-- Checkbox -->
+      <div class="custom-control custom-checkbox d-flex align-items-center text-muted">
+        <%= f.check_box :remember_me, class: "custom-control-input", id: "rememberMeCheckbox" %>
+        <label class="custom-control-label" for="rememberMeCheckbox">
+          Remember Me
+        </label>
+      </div>
+      <!-- End Checkbox -->
+    </div>
+
+    <div class="col-6 text-right">
+      <%= link_to "Forgot Password?", new_password_path(resource_name), class: "float-right" %>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <%= f.submit "Signin", class: "btn btn-block btn-primary" %>
+  </div>
+
+  <div class="text-center mb-3">
+    <p class="text-muted">Do not have an account? <a href="signup-simple.html">Signup</a></p>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>

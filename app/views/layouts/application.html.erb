@@ -25,11 +25,12 @@
 
     <!-- CSS Space Template -->
     <link rel="stylesheet" href="/assets/css/theme.css">
+    <% if controller_name == 'sessions' && action_name == 'new' %>
+      <link rel="stylesheet" href="/assets/css/signin.css">
+    <% end %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
 
     <!-- JS Global Compulsory -->
