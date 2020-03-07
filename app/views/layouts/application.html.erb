@@ -25,7 +25,7 @@
 
     <!-- CSS Space Template -->
     <link rel="stylesheet" href="/assets/css/theme.css">
-    <% if %w(sessions registrations).include?(controller_name) && action_name == 'new' %>
+    <% if %w(sessions registrations passwords).include?(controller_name) && action_name == 'new' %>
       <link rel="stylesheet" href="/assets/css/signin.css">
     <% end %>
   </head>
