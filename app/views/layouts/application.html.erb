@@ -59,6 +59,8 @@
     <script src="/assets/js/components/hs.show-animation.js"></script>
     <script src="/assets/js/components/hs.fancybox.js"></script>
     <script src="/assets/js/components/hs.go-to.js"></script>
+    <script src="/assets/js/components/hs.validation.js"></script>
+    <script src="/assets/js/components/hs.step-form.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>
@@ -110,6 +112,12 @@
 
         // initialization of fancybox
         $.HSCore.components.HSFancyBox.init('.js-fancybox');
+
+        // initialization of form validation
+        $.HSCore.components.HSValidation.init('.js-validate');
+
+        // initialization of step form
+        $.HSCore.components.HSStepForm.init('.js-step-form');
 
         // initialization of go to
         $.HSCore.components.HSGoTo.init('.js-go-to');
