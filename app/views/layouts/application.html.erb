@@ -31,7 +31,10 @@
   </head>
 
   <body>
-    <%= render 'shared/header' %>
+    <% unless %w(sessions registrations passwords).include?(controller_name) %>
+      <%= render 'shared/header' %>
+    <% end %>
+    
     <%= yield %>
 
     <!-- JS Global Compulsory -->
