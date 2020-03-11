@@ -18784,7 +18784,7 @@ button:focus {
 
 @media (min-width: 576px) {
   .u-shopping-cart-step-form__item {
-    width: 33.33333%;
+    width: 50%;
   }
 }
 

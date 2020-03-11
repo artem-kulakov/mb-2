@@ -1,0 +1,155 @@
+<!-- Payment -->
+<div id="paymentStep" style="display: none;">
+  <!-- Title -->
+  <div class="mb-4">
+    <h2 class="h4">Payment method</h2>
+  </div>
+  <!-- End Title -->
+
+  <!-- Button Group -->
+  <div class="row mb-6">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+      <a class="js-animation-link media justify-content-center align-items-center u-shopping-cart-step-form__toggler active" href="javascript:;"
+         data-target="#creditCard"
+         data-link-group="paymentMethods">
+        <i class="far fa-credit-card u-shopping-cart-step-form__toggler-icon mr-2"></i>
+        Credit Card
+      </a>
+    </div>
+    <div class="col-sm-6">
+      <a class="js-animation-link u-shopping-cart-step-form__toggler" href="javascript:;"
+         data-target="#payPal"
+         data-link-group="paymentMethods">
+        <img class="u-shopping-cart-step-form__toggler-img" src="../../assets/img/logos/paypal.png" alt="PayPal Logo">
+      </a>
+    </div>
+  </div>
+  <!-- End Button Group -->
+
+  <!-- Credit Card -->
+  <div id="creditCard" data-target-group="paymentMethods">
+    <!-- Input -->
+    <div class="js-form-message mb-6">
+      <label class="h6 small d-block text-uppercase">
+        Card number
+      </label>
+
+      <div class="js-focus-state input-group form">
+        <input class="form-control form__input" type="text" required
+               placeholder="**** **** **** ***"
+               aria-label="**** **** **** ***"
+               data-msg="Please enter a valid card number."
+               data-error-class="u-has-error"
+               data-success-class="u-has-success">
+      </div>
+    </div>
+    <!-- End Input -->
+
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Input -->
+        <div class="js-form-message mb-6">
+          <label class="h6 small d-block text-uppercase">
+            Card holder
+          </label>
+
+          <div class="js-focus-state input-group form">
+            <input class="form-control form__input" type="text" required
+                   placeholder="Jack Wayley"
+                   aria-label="Jack Wayley"
+                   data-msg="Please enter a valid card holder."
+                   data-error-class="u-has-error"
+                   data-success-class="u-has-success">
+          </div>
+        </div>
+        <!-- End Input -->
+      </div>
+
+      <div class="col-md-3">
+        <!-- Input -->
+        <div class="js-form-message mb-6">
+          <label class="h6 small d-block text-uppercase">
+            Expiration
+          </label>
+
+          <div class="js-focus-state input-group form">
+            <input class="form-control form__input" type="text" required
+                   placeholder="MM/YY"
+                   aria-label="MM/YY"
+                   data-msg="Please enter a valid date."
+                   data-error-class="u-has-error"
+                   data-success-class="u-has-success">
+          </div>
+        </div>
+        <!-- End Input -->
+      </div>
+
+      <div class="col-md-3">
+        <!-- Input -->
+        <div class="js-form-message mb-6">
+          <label class="h6 small d-block text-uppercase">
+            CVC
+          </label>
+
+          <div class="js-focus-state input-group form form--no-addon-brd">
+            <input class="form-control form__input" type="text" required
+                   placeholder="***"
+                   aria-label="***"
+                   data-msg="Please enter a valid CVC number."
+                   data-error-class="u-has-error"
+                   data-success-class="u-has-success">
+            <div class="input-group-append form__append">
+              <span class="input-group-text form__text">
+                <i class="fa fa-info-circle form__text-inner" data-toggle="tooltip" data-placement="top" title="The 3 or 4 digit code usually found on the back of your card"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- End Input -->
+      </div>
+    </div>
+  </div>
+  <!-- End Credit Card -->
+
+  <!-- Credit Card -->
+  <div id="payPal" style="display: none; opacity: 0;" data-target-group="paymentMethods">
+    <button type="submit" class="btn btn-block btn-warning mb-6">
+      Pay with
+      <img src="../../assets/img/logos/paypal.png" style="width: 70px;" alt="PayPal logo">
+    </button>
+  </div>
+  <!-- End Credit Card -->
+
+  <!-- Buttons -->
+  <div class="d-sm-flex justify-content-sm-between align-items-sm-center">
+    <a class="d-block mb-3 mb-sm-0" href="javascript:;" data-previous-step="#customerInfoStep">
+      <i class="fa fa-arrow-left mr-2"></i>
+      Back to Payment
+    </a>
+    <button type="button" class="btn btn-primary">Place Order</button>
+  </div>
+  <!-- End Buttons -->
+
+  <hr class="my-9">
+
+  <!-- Info -->
+  <div class="row">
+    <div class="col-sm-6 mb-7 mb-sm-0">
+      <!-- Icon Block -->
+      <img class="max-width-10 mb-1" src="../../assets/svg/components/safe-information-dark-icon.svg" alt="Image Description">
+      <h3 class="h6 mb-1">Your information is safe</h3>
+      <p class="font-size-14 text-muted">We will not sell your personal contact information for any marketing purposes or whatsoever.</p>
+      <!-- End Icon Block -->
+    </div>
+
+    <div class="col-sm-6">
+      <!-- Icon Block -->
+      <img class="max-width-10 mb-1" src="../../assets/svg/components/secure-checkout.svg" alt="Image Description">
+      <h3 class="h6 mb-1">Secure checkout</h3>
+      <p class="font-size-14 text-muted">All information is encrypted and transmitted without risk using a <span class="font-weight-medium">Secure Sockets Layer</span> protocol.</p>
+      <!-- End Icon Block -->
+    </div>
+  </div>
+  <!-- End Info -->
+</div>
+<!-- End Payment -->
