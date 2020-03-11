@@ -34,9 +34,13 @@
     <% unless %w(sessions registrations passwords).include?(controller_name) %>
       <%= render 'shared/header' %>
     <% end %>
-    
+
     <%= yield %>
 
+    <% unless %w(sessions registrations passwords).include?(controller_name) %>
+      <%= render 'shared/footer' %>
+    <% end %>
+    
     <!-- JS Global Compulsory -->
     <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
