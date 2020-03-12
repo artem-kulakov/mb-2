@@ -6,7 +6,9 @@ class CheckoutController < ApplicationController
   end
 
   def update_user
-    current_user.update(user_params)
+    if current_user.update(user_params)
+      redirect_to checkout_payment_path
+    end
   end
 
   def payment
