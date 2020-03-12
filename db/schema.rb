@@ -10,13 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_07_133143) do
+ActiveRecord::Schema.define(version: 2020_03_12_093347) do
 
   create_table "cars", force: :cascade do |t|
     t.string "name"
     t.integer "year"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "comfy_blog_posts", force: :cascade do |t|
+    t.integer "site_id", null: false
+    t.string "title", null: false
+    t.string "slug", null: false
+    t.integer "layout_id"
+    t.text "content_cache", limit: 16777215
+    t.integer "year", limit: 4, null: false
+    t.integer "month", limit: 2, null: false
+    t.boolean "is_published", default: true, null: false
+    t.datetime "published_at", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["created_at"], name: "index_comfy_blog_posts_on_created_at"
+    t.index ["site_id", "is_published"], name: "index_comfy_blog_posts_on_site_id_and_is_published"
+    t.index ["year", "month", "slug"], name: "index_comfy_blog_posts_on_year_and_month_and_slug"
   end
 
   create_table "comfy_cms_categories", force: :cascade do |t|
@@ -139,16 +156,7 @@ ActiveRecord::Schema.define(version: 2020_03_07_133143) do
     t.index ["page_id"], name: "index_comfy_cms_translations_on_page_id"
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'srting' for column 'street'
 
 end
