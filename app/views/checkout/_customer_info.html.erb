@@ -1,231 +1,227 @@
-<%= form_for :user, url: checkout_update_user_path do |f| %>
+<!-- Customer Info -->
+<div id="customerInfoStep" class="active">
+  <!-- Title -->
+  <div class="mb-4">
+    <h1 class="h4">Billing address</h1>
+  </div>
+  <!-- End Title -->
 
-  <!-- Customer Info -->
-  <div id="customerInfoStep" class="active">
-    <!-- Title -->
-    <div class="mb-4">
-      <h1 class="h4">Billing address</h1>
+  <!-- Billing Form -->
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Input -->
+      <div class="js-form-message mb-6">
+        <label class="h6 small d-block text-uppercase">
+          First name
+          <span class="text-danger">*</span>
+        </label>
+
+        <div class="js-focus-state input-group form">
+          <%= f.text_field :first_name,
+            class: "form-control form__input",
+            required: true,
+            placeholder: "Jack",
+            'aria-label': "Jack",
+            'data-msg': "Please enter your frist name.",
+            'data-error-class': "u-has-error",
+            'data-success-class': "u-has-success"
+          %>
+        </div>
+      </div>
+      <!-- End Input -->
     </div>
-    <!-- End Title -->
 
-    <!-- Billing Form -->
-    <div class="row">
-      <div class="col-md-6">
-        <!-- Input -->
-        <div class="js-form-message mb-6">
-          <label class="h6 small d-block text-uppercase">
-            First name
-            <span class="text-danger">*</span>
-          </label>
+    <div class="col-md-6">
+      <!-- Input -->
+      <div class="js-form-message mb-6">
+        <label class="h6 small d-block text-uppercase">
+          Last name
+          <span class="text-danger">*</span>
+        </label>
 
-          <div class="js-focus-state input-group form">
-            <%= f.text_field :first_name,
-              class: "form-control form__input",
-              required: true,
-              placeholder: "Jack",
-              'aria-label': "Jack",
-              'data-msg': "Please enter your frist name.",
-              'data-error-class': "u-has-error",
-              'data-success-class': "u-has-success"
-            %>
-          </div>
+        <div class="js-focus-state input-group form">
+          <%= f.text_field :last_name,
+            class: "form-control form__input",
+            required: true,
+            placeholder: "Wayley",
+            'aria-label': "Wayley",
+            'data-msg': "Please enter your last name.",
+            'data-error-class': "u-has-error",
+            'data-success-class': "u-has-success"
+          %>
         </div>
-        <!-- End Input -->
       </div>
-
-      <div class="col-md-6">
-        <!-- Input -->
-        <div class="js-form-message mb-6">
-          <label class="h6 small d-block text-uppercase">
-            Last name
-            <span class="text-danger">*</span>
-          </label>
-
-          <div class="js-focus-state input-group form">
-            <%= f.text_field :last_name,
-              class: "form-control form__input",
-              required: true,
-              placeholder: "Wayley",
-              'aria-label': "Wayley",
-              'data-msg': "Please enter your last name.",
-              'data-error-class': "u-has-error",
-              'data-success-class': "u-has-success"
-            %>
-          </div>
-        </div>
-        <!-- End Input -->
-      </div>
-
-      <div class="w-100"></div>
-
-      <div class="col-md-6">
-        <!-- Input -->
-        <div class="js-form-message mb-6">
-          <label class="h6 small d-block text-uppercase">
-            Email address
-            <span class="text-danger">*</span>
-          </label>
-
-          <div class="js-focus-state input-group form">
-            <%= f.email_field :email,
-              value: current_user.email,
-              disabled: true,
-              class: "form-control form__input",
-              required: true,
-              placeholder: "jackwayley@gmail.com",
-              'aria-label': "jackwayley@gmail.com",
-              'data-msg': "Please enter a valid email address.",
-              'data-error-class': "u-has-error",
-              'data-success-class': "u-has-success"
-            %>
-          </div>
-        </div>
-        <!-- End Input -->
-      </div>
-
-      <div class="col-md-6">
-        <!-- Input -->
-        <div class="js-form-message mb-6">
-          <label class="h6 small d-block text-uppercase">
-            Phone
-          </label>
-
-          <div class="js-focus-state input-group form">
-            <%= f.telephone_field :phone,
-              class: "form-control form__input",
-              required: true,
-              placeholder: "+1 (062) 109-9222",
-              'aria-label': "+1 (062) 109-9222",
-              'data-msg': "Please enter your last name.",
-              'data-error-class': "u-has-error",
-              'data-success-class': "u-has-success"
-            %>
-          </div>
-        </div>
-        <!-- End Input -->
-      </div>
-
-      <div class="w-100"></div>
-
-      <div class="col-md-8">
-        <!-- Input -->
-        <div class="js-form-message mb-6">
-          <label class="h6 small d-block text-uppercase">
-            Street address
-            <span class="text-danger">*</span>
-          </label>
-
-          <div class="js-focus-state input-group form">
-            <%= f.text_field :street,
-              class: "form-control form__input",
-              required: true,
-              placeholder: "470 Lucy Forks",
-              'aria-label': "470 Lucy Forks",
-              'data-msg': "Please enter a valid address.",
-              'data-error-class': "u-has-error",
-              'data-success-class': "u-has-success"
-            %>
-          </div>
-        </div>
-        <!-- End Input -->
-      </div>
-
-      <div class="col-md-4">
-        <!-- Input -->
-        <div class="js-form-message mb-6">
-          <label class="h6 small d-block text-uppercase">
-            Apt, suite, etc.
-          </label>
-
-          <div class="js-focus-state input-group form">
-            <%= f.text_field :apartment,
-              class: "form-control form__input",
-              required: true,
-              placeholder: "YC7B 3UT",
-              'aria-label': "YC7B 3UT",
-              'data-msg': "Please enter a valid address.",
-              'data-error-class': "u-has-error",
-              'data-success-class': "u-has-success"
-            %>
-          </div>
-        </div>
-        <!-- End Input -->
-      </div>
-
-      <div class="col-md-12">
-        <!-- Input -->
-        <div class="js-form-message mb-6">
-          <label class="h6 small d-block text-uppercase">
-            City
-            <span class="text-danger">*</span>
-          </label>
-
-          <div class="js-focus-state input-group form">
-            <%= f.text_field :city,
-              class: "form-control form__input",
-              required: true,
-              placeholder: "London",
-              'aria-label': "London",
-              'data-msg': "Please enter a valid address.",
-              'data-error-class': "u-has-error",
-              'data-success-class': "u-has-success"
-            %>
-          </div>
-        </div>
-        <!-- End Input -->
-      </div>
-
-      <div class="w-100"></div>
-
-      <div class="col-md-6">
-        <!-- Input -->
-        <div class="mb-6">
-          <label class="h6 small d-block text-uppercase">
-            Country
-            <span class="text-danger">*</span>
-          </label>
-          <%= collection_select :user, :country, @countries, :first, :last, {prompt: 'Select country'}, {class: 'custom-select', required: true} %>
-        </div>
-        <!-- End Input -->
-      </div>
-
-      <div class="col-md-6">
-        <!-- Input -->
-        <div class="js-form-message mb-6">
-          <label class="h6 small d-block text-uppercase">
-            Postcode/Zip
-            <span class="text-danger">*</span>
-          </label>
-
-          <div class="js-focus-state input-group form">
-            <%= f.text_field :zip,
-              class: "form-control form__input",
-              required: true,
-              placeholder: "99999",
-              'aria-label': "99999",
-              'data-msg': "Please enter a postcode or zip code.",
-              'data-error-class': "u-has-error",
-              'data-success-class': "u-has-success"
-            %>
-          </div>
-        </div>
-        <!-- End Input -->
-      </div>
+      <!-- End Input -->
     </div>
-    <!-- End Billing Form -->
 
-    <!-- Buttons -->
-    <div class="d-sm-flex justify-content-sm-between align-items-sm-center">
-      <a class="d-block mb-3 mb-sm-0" href="classic.html">
-        <i class="fa fa-arrow-left mr-2"></i>
-        Continue Shopping
-      </a>
+    <div class="w-100"></div>
 
-      <%= f.submit "Proceed to Payment", class: "btn btn-primary", 'data-next-step': "#paymentStep" %>
+    <div class="col-md-6">
+      <!-- Input -->
+      <div class="js-form-message mb-6">
+        <label class="h6 small d-block text-uppercase">
+          Email address
+          <span class="text-danger">*</span>
+        </label>
+
+        <div class="js-focus-state input-group form">
+          <%= f.email_field :email,
+            value: current_user.email,
+            disabled: true,
+            class: "form-control form__input",
+            required: true,
+            placeholder: "jackwayley@gmail.com",
+            'aria-label': "jackwayley@gmail.com",
+            'data-msg': "Please enter a valid email address.",
+            'data-error-class': "u-has-error",
+            'data-success-class': "u-has-success"
+          %>
+        </div>
+      </div>
+      <!-- End Input -->
     </div>
-    <!-- End Buttons -->
 
-  <% end %>
+    <div class="col-md-6">
+      <!-- Input -->
+      <div class="js-form-message mb-6">
+        <label class="h6 small d-block text-uppercase">
+          Phone
+        </label>
+
+        <div class="js-focus-state input-group form">
+          <%= f.telephone_field :phone,
+            class: "form-control form__input",
+            required: true,
+            placeholder: "+1 (062) 109-9222",
+            'aria-label': "+1 (062) 109-9222",
+            'data-msg': "Please enter your last name.",
+            'data-error-class': "u-has-error",
+            'data-success-class': "u-has-success"
+          %>
+        </div>
+      </div>
+      <!-- End Input -->
+    </div>
+
+    <div class="w-100"></div>
+
+    <div class="col-md-8">
+      <!-- Input -->
+      <div class="js-form-message mb-6">
+        <label class="h6 small d-block text-uppercase">
+          Street address
+          <span class="text-danger">*</span>
+        </label>
+
+        <div class="js-focus-state input-group form">
+          <%= f.text_field :street,
+            class: "form-control form__input",
+            required: true,
+            placeholder: "470 Lucy Forks",
+            'aria-label': "470 Lucy Forks",
+            'data-msg': "Please enter a valid address.",
+            'data-error-class': "u-has-error",
+            'data-success-class': "u-has-success"
+          %>
+        </div>
+      </div>
+      <!-- End Input -->
+    </div>
+
+    <div class="col-md-4">
+      <!-- Input -->
+      <div class="js-form-message mb-6">
+        <label class="h6 small d-block text-uppercase">
+          Apt, suite, etc.
+        </label>
+
+        <div class="js-focus-state input-group form">
+          <%= f.text_field :apartment,
+            class: "form-control form__input",
+            required: true,
+            placeholder: "YC7B 3UT",
+            'aria-label': "YC7B 3UT",
+            'data-msg': "Please enter a valid address.",
+            'data-error-class': "u-has-error",
+            'data-success-class': "u-has-success"
+          %>
+        </div>
+      </div>
+      <!-- End Input -->
+    </div>
+
+    <div class="col-md-12">
+      <!-- Input -->
+      <div class="js-form-message mb-6">
+        <label class="h6 small d-block text-uppercase">
+          City
+          <span class="text-danger">*</span>
+        </label>
+
+        <div class="js-focus-state input-group form">
+          <%= f.text_field :city,
+            class: "form-control form__input",
+            required: true,
+            placeholder: "London",
+            'aria-label': "London",
+            'data-msg': "Please enter a valid address.",
+            'data-error-class': "u-has-error",
+            'data-success-class': "u-has-success"
+          %>
+        </div>
+      </div>
+      <!-- End Input -->
+    </div>
+
+    <div class="w-100"></div>
+
+    <div class="col-md-6">
+      <!-- Input -->
+      <div class="mb-6">
+        <label class="h6 small d-block text-uppercase">
+          Country
+          <span class="text-danger">*</span>
+        </label>
+        <%= collection_select :user, :country, @countries, :first, :last, {prompt: 'Select country'}, {class: 'custom-select', required: true} %>
+      </div>
+      <!-- End Input -->
+    </div>
+
+    <div class="col-md-6">
+      <!-- Input -->
+      <div class="js-form-message mb-6">
+        <label class="h6 small d-block text-uppercase">
+          Postcode/Zip
+          <span class="text-danger">*</span>
+        </label>
+
+        <div class="js-focus-state input-group form">
+          <%= f.text_field :zip,
+            class: "form-control form__input",
+            required: true,
+            placeholder: "99999",
+            'aria-label': "99999",
+            'data-msg': "Please enter a postcode or zip code.",
+            'data-error-class': "u-has-error",
+            'data-success-class': "u-has-success"
+          %>
+        </div>
+      </div>
+      <!-- End Input -->
+    </div>
+  </div>
+  <!-- End Billing Form -->
+
+  <!-- Buttons -->
+  <div class="d-sm-flex justify-content-sm-between align-items-sm-center">
+    <a class="d-block mb-3 mb-sm-0" href="classic.html">
+      <i class="fa fa-arrow-left mr-2"></i>
+      Continue Shopping
+    </a>
+
+    <%= f.submit "Proceed to Payment", class: "btn btn-primary", 'data-next-step': "#paymentStep" %>
+  </div>
+  <!-- End Buttons -->
 
   <hr class="my-9">
 

@@ -101,10 +101,12 @@
 
       <div class="col-lg-8 order-lg-1">
         <!-- Checkout Form -->
-        <!-- <form class="js-validate js-step-form pr-lg-4"
-              data-progress-id="#stepFormProgress"
-              data-steps-id="#stepFormContent"
-              novalidate="novalidate"> -->
+        <%= form_for :user, url: checkout_update_user_path, html: {
+          class: "js-validate js-step-form pr-lg-4",
+          'data-progress-id': "#stepFormProgress",
+          'data-steps-id': "#stepFormContent",
+          novalidate: "novalidate"
+        } do |f| %>
           <!-- Step Form Header -->
           <ul id="stepFormProgress" class="js-step-progress list-inline u-shopping-cart-step-form mb-4">
             <!-- Step Form Item -->
@@ -127,12 +129,12 @@
 
           <!-- Step Form Content -->
           <div id="stepFormContent">
-            <%= render 'customer_info' %>
+            <%= render 'customer_info', f: f %>
 
             <%= render 'payment' %>
           </div>
           <!-- End Step Form Content -->
-        <!-- </form> -->
+        <% end %>
         <!-- End Checkout Form -->
       </div>
     </div>
