@@ -3,6 +3,7 @@ class CheckoutController < ApplicationController
 
   def index
     @countries = CS.countries
+    render 'checkout'
   end
 
   def update_user
@@ -12,6 +13,7 @@ class CheckoutController < ApplicationController
   end
 
   def payment
+    render 'checkout'
   end
 
   private

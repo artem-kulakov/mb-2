@@ -129,9 +129,8 @@
 
           <!-- Step Form Content -->
           <div id="stepFormContent">
-            <%= render 'customer_info', f: f %>
-
-            <%#= render 'payment' %>
+            <%= render('customer_info', f: f) if action_name == 'index' %>
+            <%= render('payment', f: f) if action_name == 'payment' %>
           </div>
           <!-- End Step Form Content -->
         <% end %>

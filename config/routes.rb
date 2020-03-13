@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'checkout', to: 'checkout#index'
+  get 'payment', to: 'checkout#payment'
   post 'checkout/update_user'
-  get 'checkout/payment'
 
   devise_for :users, controllers: {
     sessions: 'users/sessions',
