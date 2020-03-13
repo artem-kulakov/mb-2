@@ -122,10 +122,10 @@
 
   <!-- Buttons -->
   <div class="d-sm-flex justify-content-sm-between align-items-sm-center">
-    <a class="d-block mb-3 mb-sm-0" href="javascript:;" data-previous-step="#customerInfoStep">
+    <%= link_to checkout_user_info_path, class: "d-block mb-3 mb-sm-0", 'data-previous-step': "#customerInfoStep" do %>
       <i class="fa fa-arrow-left mr-2"></i>
-      Back to Payment
-    </a>
+      Back to Customer Info
+    <% end %>
     <button type="button" class="btn btn-primary">Place Order</button>
   </div>
   <!-- End Buttons -->
