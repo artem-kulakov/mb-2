@@ -1,12 +1,12 @@
 class CheckoutController < ApplicationController
   before_action :authenticate_user!
 
-  def index
+  def user_info
     @countries = CS.countries
     render 'checkout'
   end
 
-  def update_user
+  def update_user_info
     if current_user.update(user_params)
       redirect_to checkout_payment_path
     end

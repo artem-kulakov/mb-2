@@ -101,7 +101,7 @@
 
       <div class="col-lg-8 order-lg-1">
         <!-- Checkout Form -->
-        <%= form_for :user, url: checkout_update_user_path, html: {
+        <%= form_for :user, url: checkout_update_user_info_path, html: {
           class: "js-validate js-step-form pr-lg-4",
           'data-progress-id': "#stepFormProgress",
           'data-steps-id': "#stepFormContent",
@@ -129,7 +129,7 @@
 
           <!-- Step Form Content -->
           <div id="stepFormContent">
-            <%= render('customer_info', f: f) if action_name == 'index' %>
+            <%= render('user_info', f: f) if action_name == 'user_info' %>
             <%= render('payment', f: f) if action_name == 'payment' %>
           </div>
           <!-- End Step Form Content -->
