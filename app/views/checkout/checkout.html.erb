@@ -110,7 +110,7 @@
           <!-- Step Form Header -->
           <ul id="stepFormProgress" class="js-step-progress list-inline u-shopping-cart-step-form mb-4">
             <!-- Step Form Item -->
-            <li class="list-inline-item u-shopping-cart-step-form__item mb-5 active">
+            <li class="list-inline-item u-shopping-cart-step-form__item mb-5 <%= 'active' if action_name == 'user_info' %>">
               <img class="max-width-10 mx-auto mb-2" src="../../assets/svg/components/user-info-dark-icon.svg" alt="Image Description">
               <span class="u-shopping-cart-step-form__title">Customer info</span>
               <span class="u-shopping-cart-step-form__subtitle">Name and address</span>
@@ -118,7 +118,7 @@
             <!-- End Step Form Item -->
 
             <!-- Step Form Item -->
-            <li class="list-inline-item u-shopping-cart-step-form__item mb-5">
+            <li class="list-inline-item u-shopping-cart-step-form__item mb-5 <%= 'active' if action_name == 'payment' %>">
               <img class="max-width-10 mx-auto mb-2" src="../../assets/svg/components/cards-dark-icon.svg" alt="Image Description">
               <span class="u-shopping-cart-step-form__title">Payment</span>
               <span class="u-shopping-cart-step-form__subtitle">Payment details</span>
