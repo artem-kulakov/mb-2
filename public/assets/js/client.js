@@ -6,9 +6,15 @@ var elements = stripe.elements();
 // Custom styling can be passed to options when creating an Element.
 var style = {
   base: {
-    // Add your base input styles here. For example:
+    color: '#151b26',
+    fontWeight: 400,
+    fontFamily: '"Roboto", Helvetica, Arial, sans-serif',
     fontSize: '16px',
-    color: '#32325d',
+    fontSmoothing: 'antialiased',
+
+    '::placeholder': {
+      color: '#8A98A5',
+    },
   },
 };
 
