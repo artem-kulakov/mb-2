@@ -12,18 +12,33 @@ var style = {
   },
 };
 
-// Create an instance of the card Element.
-var card = elements.create('card', {style: style});
+// Create an instances of the card Elements.
+var cardNumber = elements.create('cardNumber', {style: style});
+cardNumber.mount('#example3-card-number');
 
-// Add an instance of the card Element into the `card-element` <div>.
-card.mount('#card-element');
+var cardExpiry = elements.create('cardExpiry', {style: style});
+cardExpiry.mount('#example3-card-expiry');
+
+var cardCvc = elements.create('cardCvc', {style: style});
+cardCvc.mount('#example3-card-cvc');
+
+
+
+
+
+
+
+
+
+
+
 
 // Create a token or display an error when the form is submitted.
 var form = document.getElementById('payment-form');
 form.addEventListener('submit', function(event) {
   event.preventDefault();
 
-  stripe.createToken(card).then(function(result) {
+  stripe.createToken(cardNumber).then(function(result) {
     if (result.error) {
       // Inform the customer that there was an error.
       var errorElement = document.getElementById('card-errors');
