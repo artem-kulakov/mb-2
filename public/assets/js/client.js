@@ -108,6 +108,7 @@ $(document).ready(function() {
       // handle result.error or result.source
 
       // Show QR code
+      $('#qrcode-container').append('<div class="col-sm-12 text-center mb-5"><div id="qrcode" class="d-inline-block"></div></div>');
       new QRCode(document.getElementById("qrcode"), result.source.wechat.qr_code_url);
 
       // Redirect to 'checkout/review' when source becomes chargeable
