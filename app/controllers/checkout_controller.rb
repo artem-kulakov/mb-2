@@ -34,25 +34,6 @@ class CheckoutController < ApplicationController
     })
   end
 
-  def charge_alipay
-    # Set your secret key: remember to change this to your live secret key in production
-    # See your keys here: https://dashboard.stripe.com/account/apikeys
-    Stripe.api_key = 'sk_test_0m79ESPioZi6qHal8HQBq4M400KUECKnRc'
-
-    # Token is created using Stripe Checkout or Elements!
-    # Get the payment token ID submitted by the form:
-    source = params[:source]
-
-    charge = Stripe::Charge.create({
-      amount: 10999,
-      currency: 'usd',
-      description: 'Example charge',
-      source: source,
-    })
-
-    redirect_to checkout_payment_path
-  end
-
   # Webhook to charge Alipay or WeChat Pay
   def charge_source
     Stripe.api_key = 'sk_test_0m79ESPioZi6qHal8HQBq4M400KUECKnRc'

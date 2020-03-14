@@ -1,6 +1,9 @@
 // Set your publishable key: remember to change this to your live publishable key in production
 // See your keys here: https://dashboard.stripe.com/account/apikeys
 var stripe = Stripe('pk_test_5LZWgoJKuKjk88n3o8o8UuAU00hjM6oe94');
+
+
+
 var elements = stripe.elements();
 
 // Custom styling can be passed to options when creating an Element.
@@ -27,15 +30,6 @@ cardExpiry.mount('#example3-card-expiry');
 
 var cardCvc = elements.create('cardCvc', {style: style});
 cardCvc.mount('#example3-card-cvc');
-
-
-
-
-
-
-
-
-
 
 
 
@@ -71,8 +65,6 @@ function stripeTokenHandler(token) {
 
 
 
-
-
 // Alipay and WeChat
 $(document).ready(function() {
   // Alipay
@@ -82,7 +74,7 @@ $(document).ready(function() {
       amount: 10999,
       currency: 'usd',
       redirect: {
-        return_url: 'http://localhost:3000/checkout/charge_alipay',
+        return_url: 'http://localhost:3000/checkout/payment',
       },
     }).then(function(result) {
       // handle result.error or result.source
