@@ -115,13 +115,18 @@
   </div>
   <!-- End Alipay -->
 
-  <!-- Credit Card -->
+  <!-- WeChat Pay -->
   <div id="weChat" style="display: none; opacity: 0;" data-target-group="paymentMethods">
-    <button type="submit" class="btn btn-block btn-warning mb-6">
+    <!-- QR code -->
+    <div class="col-sm-12 text-center mb-4">
+      <div id="qrcode" class="d-inline-block"></div>
+    </div>
+    
+    <button type="submit" class="btn btn-block btn-warning mb-6 wechat-button">
       Pay with WeChat
     </button>
   </div>
-  <!-- End Credit Card -->
+  <!-- End WeChat Pay -->
 
   <!-- Buttons -->
   <div class="d-sm-flex justify-content-sm-between align-items-sm-center">

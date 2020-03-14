@@ -1,5 +1,5 @@
 class CheckoutController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: %i[charge_source]
   skip_before_action :verify_authenticity_token
 
   def user_info
@@ -51,6 +51,47 @@ class CheckoutController < ApplicationController
     })
 
     redirect_to checkout_payment_path
+  end
+
+  # Webhook to charge Alipay or WeChat Pay
+  def charge_source
+    Stripe.api_key = 'sk_test_0m79ESPioZi6qHal8HQBq4M400KUECKnRc'
+
+    type = params[:data][:object][:type]
+
+    status = params[:type]
+
+    source = params[:data][:object][:id]
+
+    amount = params[:data][:object][:amount]
+
+    if status == 'source.chargeable'
+      charge = Stripe::Charge.create({
+        amount: amount,
+        currency: 'usd',
+        description: 'Alipay or WeChat Pay',
+        source: source,
+      })
+    end
+  end
+
+  # Check if WeChat customer authorized or declined payment
+  def did_customer_react
+    source_id = params[:id]
+
+    source = Stripe::Source.retrieve(
+      source_id,
+    )
+
+    unless source.nil?
+      status = source[:status]
+
+      unless status == 'pending'
+        render json: {response: 'yes'}
+      else
+        render json: {response: 'no'}
+      end
+    end
   end
 
   private

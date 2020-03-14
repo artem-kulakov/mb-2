@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'checkout/payment'
   post 'checkout/charge_card'
   get 'checkout/charge_alipay'
+  post 'checkout/charge_source'
+  get 'checkout/did_customer_react'
 
   devise_for :users, controllers: {
     sessions: 'users/sessions',

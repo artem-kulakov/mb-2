@@ -73,9 +73,9 @@ function stripeTokenHandler(token) {
 
 
 
-
-// Alipay
+// Alipay and WeChat
 $(document).ready(function() {
+  // Alipay
   $( ".alipay-button" ).click(function() {
     stripe.createSource({
       type: 'alipay',
@@ -86,7 +86,40 @@ $(document).ready(function() {
       },
     }).then(function(result) {
       // handle result.error or result.source
-      window.location.replace(result.source['redirect']['url']);
+      window.location.replace(result.source.redirect.url);
+    });
+  });
+
+  // Wechat
+  $( ".wechat-button" ).click(function() {
+    // Disable button
+    $( ".wechat-button" ).attr("disabled", true);
+
+    // Charge source
+    stripe.createSource({
+      type: 'wechat',
+      amount: 10000,
+      currency: 'usd',
+      statement_descriptor: 'wechat',
+      owner: {
+        name: 'WeChat Pay client',
+      },
+    }).then(function(result) {
+      // handle result.error or result.source
+
+      // Show QR code
+      new QRCode(document.getElementById("qrcode"), result.source.wechat.qr_code_url);
+
+      // Redirect to 'checkout/review' when source becomes chargeable
+      var json = { "id" : result.source.id}
+      setInterval(function() {
+        $.getJSON( "did_customer_react", json, function( data ) {
+          if(data.response == 'yes') {
+            window.location.href = '/checkout/payment';
+            // window.location.href = '/checkout/review?source=' + result.source.id;
+          }
+        });        
+      }, 2000);
     });
   });
 });
