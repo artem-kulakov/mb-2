@@ -9,13 +9,19 @@ class CheckoutController < ApplicationController
   end
 
   def update_user_info
+    session[:user_info_inputted] = true
+
     if current_user.update(user_params)
       redirect_to checkout_payment_path
     end
   end
 
   def payment
-    render 'checkout'
+    if session[:user_info_inputted] == true
+      render 'checkout'
+    else
+      redirect_to checkout_user_info_path
+    end
   end
 
   def charge_card
