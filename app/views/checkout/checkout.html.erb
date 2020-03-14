@@ -101,39 +101,32 @@
 
       <div class="col-lg-8 order-lg-1">
         <!-- Checkout Form -->
-        <%#= form_for :user, url: checkout_update_user_info_path, html: {
-          class: "js-validate js-step-form pr-lg-4",
-          'data-progress-id': "#stepFormProgress",
-          'data-steps-id': "#stepFormContent",
-          novalidate: "novalidate"
-        } do |f| %>
-          <!-- Step Form Header -->
-          <ul id="stepFormProgress" class="js-step-progress list-inline u-shopping-cart-step-form mb-4">
-            <!-- Step Form Item -->
-            <li class="list-inline-item u-shopping-cart-step-form__item mb-5 <%= 'active' if action_name == 'user_info' %>">
-              <img class="max-width-10 mx-auto mb-2" src="../../assets/svg/components/user-info-dark-icon.svg" alt="Image Description">
-              <span class="u-shopping-cart-step-form__title">Customer info</span>
-              <span class="u-shopping-cart-step-form__subtitle">Name and address</span>
-            </li>
-            <!-- End Step Form Item -->
+        <!-- Step Form Header -->
+        <ul id="stepFormProgress" class="js-step-progress list-inline u-shopping-cart-step-form mb-4">
+          <!-- Step Form Item -->
+          <li class="list-inline-item u-shopping-cart-step-form__item mb-5 <%= 'active' if action_name == 'user_info' %>">
+            <img class="max-width-10 mx-auto mb-2" src="../../assets/svg/components/user-info-dark-icon.svg" alt="Image Description">
+            <span class="u-shopping-cart-step-form__title">Customer info</span>
+            <span class="u-shopping-cart-step-form__subtitle">Name and address</span>
+          </li>
+          <!-- End Step Form Item -->
 
-            <!-- Step Form Item -->
-            <li class="list-inline-item u-shopping-cart-step-form__item mb-5 <%= 'active' if action_name == 'payment' %>">
-              <img class="max-width-10 mx-auto mb-2" src="../../assets/svg/components/cards-dark-icon.svg" alt="Image Description">
-              <span class="u-shopping-cart-step-form__title">Payment</span>
-              <span class="u-shopping-cart-step-form__subtitle">Payment details</span>
-            </li>
-            <!-- End Step Form Item -->
-          </ul>
-          <!-- End Step Form Header -->
+          <!-- Step Form Item -->
+          <li class="list-inline-item u-shopping-cart-step-form__item mb-5 <%= 'active' if action_name == 'payment' %>">
+            <img class="max-width-10 mx-auto mb-2" src="../../assets/svg/components/cards-dark-icon.svg" alt="Image Description">
+            <span class="u-shopping-cart-step-form__title">Payment</span>
+            <span class="u-shopping-cart-step-form__subtitle">Payment details</span>
+          </li>
+          <!-- End Step Form Item -->
+        </ul>
+        <!-- End Step Form Header -->
 
-          <!-- Step Form Content -->
-          <div id="stepFormContent">
-            <%= render('user_info', f: f) if action_name == 'user_info' %>
-            <%= render('payment') if action_name == 'payment' %>
-          </div>
-          <!-- End Step Form Content -->
-        <%# end %>
+        <!-- Step Form Content -->
+        <div id="stepFormContent">
+          <%= render('user_info') if action_name == 'user_info' %>
+          <%= render('payment') if action_name == 'payment' %>
+        </div>
+        <!-- End Step Form Content -->
         <!-- End Checkout Form -->
       </div>
     </div>
