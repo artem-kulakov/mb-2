@@ -1,6 +1,7 @@
 class CheckoutController < ApplicationController
   before_action :authenticate_user!, except: %i[charge_source]
   skip_before_action :verify_authenticity_token
+  before_action :set_stripe_secret_key, only: %i[charge_card charge_source]
 
   def user_info
     @countries = CS.countries
@@ -18,12 +19,6 @@ class CheckoutController < ApplicationController
   end
 
   def charge_card
-    # Set your secret key. Remember to switch to your live secret key in production!
-    # See your keys here: https://dashboard.stripe.com/account/apikeys
-    Stripe.api_key = 'sk_test_0m79ESPioZi6qHal8HQBq4M400KUECKnRc'
-
-    # Token is created using Stripe Checkout or Elements!
-    # Get the payment token ID submitted by the form:
     token = params[:stripeToken]
 
     charge = Stripe::Charge.create({
@@ -36,8 +31,6 @@ class CheckoutController < ApplicationController
 
   # Webhook to charge Alipay or WeChat Pay
   def charge_source
-    Stripe.api_key = 'sk_test_0m79ESPioZi6qHal8HQBq4M400KUECKnRc'
-
     type = params[:data][:object][:type]
 
     status = params[:type]
@@ -76,6 +69,10 @@ class CheckoutController < ApplicationController
   end
 
   private
+
+    def set_stripe_secret_key
+      Stripe.api_key = Rails.application.credentials.stripe[:api_key]
+    end
 
     def user_params
       params.require(:user).permit(
