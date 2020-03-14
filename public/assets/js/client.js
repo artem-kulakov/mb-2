@@ -69,3 +69,24 @@ function stripeTokenHandler(token) {
   form.submit();
 }
 
+
+
+
+
+
+// Alipay
+$(document).ready(function() {
+  $( ".alipay-button" ).click(function() {
+    stripe.createSource({
+      type: 'alipay',
+      amount: 10999,
+      currency: 'usd',
+      redirect: {
+        return_url: 'http://localhost:3000/checkout/charge_alipay',
+      },
+    }).then(function(result) {
+      // handle result.error or result.source
+      window.location.replace(result.source['redirect']['url']);
+    });
+  });
+});

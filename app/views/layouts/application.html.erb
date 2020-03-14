@@ -41,9 +41,6 @@
       <%= render 'shared/footer' %>
     <% end %>
     
-    <!-- Stripe -->
-    <script src="/assets/js/client.js?v=<%= Time.now.to_i %>"></script>
-
     <!-- JS Global Compulsory -->
     <script src="/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="/assets/vendor/jquery-migrate/dist/jquery-migrate.min.js"></script>
@@ -134,5 +131,8 @@
         $.HSCore.components.HSGoTo.init('.js-go-to');
       });
     </script>
+
+    <!-- Stripe -->
+    <script src="/assets/js/client.js?v=<%= Time.now.to_i %>"></script>
   </body>
 </html>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'checkout/payment'
   post 'checkout/charge_card'
+  get 'checkout/charge_alipay'
 
   devise_for :users, controllers: {
     sessions: 'users/sessions',
