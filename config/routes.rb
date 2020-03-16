@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :posts
+  
   get 'checkout/user_info'
   post 'checkout/update_user_info'
 
