@@ -58,6 +58,7 @@
     <script src="/assets/vendor/custombox/dist/custombox.legacy.min.js"></script>
     <script src="/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
     <script src="/assets/vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="/assets/vendor/instafeed.js/instafeed.min.js"></script>
 
     <!-- JS Space -->
     <script src="/assets/js/hs.core.js"></script>
@@ -72,6 +73,7 @@
     <script src="/assets/js/components/hs.go-to.js"></script>
     <script src="/assets/js/components/hs.validation.js"></script>
     <script src="/assets/js/components/hs.step-form.js"></script>
+    <script src="/assets/js/components/hs.instagram.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>
@@ -129,6 +131,22 @@
 
         // initialization of step form
         // $.HSCore.components.HSStepForm.init('.js-step-form');
+
+        // initialization of instagram api
+        $.HSCore.components.HSInstagram.init('#instaFeed', {
+          resolution: 'standard_resolution',
+          after: function () {
+            // initialization of masonry.js
+            var $grid = $('.js-instagram').masonry({
+              percentPosition: true
+            });
+
+            // initialization of images loaded
+            $grid.imagesLoaded().progress(function () {
+              $grid.masonry();
+            });
+          }
+        });
 
         // initialization of go to
         $.HSCore.components.HSGoTo.init('.js-go-to');
