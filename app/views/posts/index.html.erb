@@ -25,7 +25,7 @@
               </div>
               <div class="card-footer bg-gray-100 py-4 px-5">
                 <div class="media">
-                  <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
+                  <img class="u-sm-avatar rounded-circle mr-3" src="<%= post.user.image || "/assets/img/100x100/img18.jpg" %>" alt="Image Description">
                   <div class="media-body">
                     <h4 class="d-inline-block mb-0">
                       <a class="d-block font-size-13" href="single-article-classic.html"><%= post.user.first_name + ' ' + post.user.last_name %></a>
