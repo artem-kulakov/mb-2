@@ -12,281 +12,30 @@
     <div class="row">
       <div class="col-lg-9 order-lg-2 mb-9 mb-lg-0">
         <div class="card-mb card-sm-columns card-sm-2-count">
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img11.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">April 3, 2018</small>
-              <h3 class="h5">
-                <a href="single-article-classic.html">Respect always comes first</a>
-              </h3>
-              <p>The past years have been remarkable for web technologies.</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h4 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="single-article-classic.html">Andrea Gard</a>
-                  </h4>
+          <% @posts.each do |post| %>
+            <!-- Blog Grid -->
+            <article class="card mb-3">
+              <img class="card-img-top" src="../../assets/img/500x250/img11.jpg" alt="Image Description">
+              <div class="card-body p-5">
+                <small class="d-block text-muted mb-2"><%= post.date.strftime("%B %e, %Y")  %></small>
+                <h3 class="h5">
+                  <a href="single-article-classic.html"><%= post.title %></a>
+                </h3>
+                <p><%= post.subtitle %></p>
+              </div>
+              <div class="card-footer bg-gray-100 py-4 px-5">
+                <div class="media">
+                  <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
+                  <div class="media-body">
+                    <h4 class="d-inline-block mb-0">
+                      <a class="d-block font-size-13" href="single-article-classic.html"><%= post.user.first_name + ' ' + post.user.last_name %></a>
+                    </h4>
+                  </div>
                 </div>
               </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
-
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img6.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">May 22, 2018</small>
-              <h3 class="h5">
-                <a href="single-article-classic.html">Announcing a plan for small teams</a>
-              </h3>
-              <p class="mb-0">We've always believed that by providing a space</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img3.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h4 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="#">James Austin</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
-
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img14.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">May 30, 2018</small>
-              <h3 class="h5">
-                <a href="single-article-classic.html">Design principles</a>
-              </h3>
-              <p class="mb-0">The biggest collections of design principles on the internet</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img2.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h4 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="#">Charlotte Moore</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
-
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img13.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">April 1, 2018</small>
-              <h3 class="h5">
-                <a href="single-article-classic.html">Touch yourself</a>
-              </h3>
-              <p>Everyone's are different, and they can even change</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img4.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h4 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="single-article-classic.html">Scott Levine</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
-
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img4.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">May 15, 2018</small>
-              <h2 class="h5">
-                <a href="single-article-classic.html">InVision design forward fund</a>
-              </h2>
-              <p class="mb-0">Clark Valberg is the founder and CEO of InVision.</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h3 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="#">Andrea Gard</a>
-                  </h3>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
-
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img10.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">April 7, 2018</small>
-              <h3 class="h5">
-                <a href="single-article-classic.html">5 basic tips for colors</a>
-              </h3>
-              <p>Tips and tricks that most people wouldn't highlight when colors.</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img4.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h4 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="single-article-classic.html">Scott Levine</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
-
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img12.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">April 7, 2018</small>
-              <h3 class="h5">
-                <a href="single-article-classic.html">Gimme that Awwward!</a>
-              </h3>
-              <p>Tis the season to be jolly, and Ueno has one more thing to be cheery about in 2017.</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img4.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h4 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="single-article-classic.html">Scott Levine</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
-
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img8.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">April 22, 2018</small>
-              <h3 class="h5">
-                <a href="single-article-classic.html">Sit still with ClearMotion</a>
-              </h3>
-              <p>Fewer bumps in the road: ClearMotion is a new technology that does to your ride what noise cancelling does to your headphones.</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img3.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h4 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="single-article-classic.html">James Austin</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
-
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img3.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">April 30, 2018</small>
-              <h3 class="h5">
-                <a href="single-article-classic.html">Listen to Scott Belsky</a>
-              </h3>
-              <p>Guess what. We're sponsoring the February edition of CreativeMornings/New York.</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img2.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h4 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="single-article-classic.html">Charlotte Moore</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
-
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img9.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">April 1, 2018</small>
-              <h3 class="h5">
-                <a href="single-article-classic.html">A win-win-win situation</a>
-              </h3>
-              <p>It's nice to win awards. Last night, the Ueno team in Reykjavík came home from the Icelandic Web Awards.</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img4.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h4 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="single-article-classic.html">Scott Levine</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
-
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img7.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">April 3, 2018</small>
-              <h3 class="h5">
-                <a href="single-article-classic.html">A new look for Reuters.com</a>
-              </h3>
-              <p>We've been working hard with our besties at Reuters to design a new reading experience for Reuters.com.</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h4 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="single-article-classic.html">Andrea Gard</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
-
-          <!-- Blog Grid -->
-          <article class="card mb-3">
-            <img class="card-img-top" src="../../assets/img/500x250/img5.jpg" alt="Image Description">
-            <div class="card-body p-5">
-              <small class="d-block text-muted mb-2">April 15, 2018</small>
-              <h3 class="h5">
-                <a href="single-article-classic.html">Breathing in the Crisp Air of Lake</a>
-              </h3>
-              <p>Sailing here was a surreal experience. The light fog snaked its way through the valley, but still let the sun warm our backs.</p>
-            </div>
-            <div class="card-footer bg-gray-100 py-4 px-5">
-              <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
-                <div class="media-body">
-                  <h4 class="d-inline-block mb-0">
-                    <a class="d-block font-size-13" href="single-article-classic.html">Andrea Gard</a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </article>
-          <!-- End Blog Grid -->
+            </article>
+            <!-- End Blog Grid -->
+          <% end %>
         </div>
 
         <div class="mb-9"></div>
