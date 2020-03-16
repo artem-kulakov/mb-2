@@ -25,12 +25,18 @@
 #   )
 # end
 
-indexes = [1,2,3,4,14,15,16,17]
-
-User.all.each do |user|
-  user.update(
-    # first_name: Faker::Name.first_name,
-    # last_name: Faker::Name.last_name,
-    image: "/assets/img/100x100/img#{indexes.sample}.jpg"
+Post.all.each do |post|
+  post.update(
+    image: "/assets/img/500x250/img#{1+rand(14)}.jpg"
   )
 end
+
+# indexes = [1,2,3,4,14,15,16,17]
+
+# User.all.each do |user|
+#   user.update(
+#     first_name: Faker::Name.first_name,
+#     last_name: Faker::Name.last_name,
+#     image: "/assets/img/100x100/img#{indexes.sample}.jpg"
+#   )
+# end

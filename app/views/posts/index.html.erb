@@ -15,7 +15,7 @@
           <% @posts.each do |post| %>
             <!-- Blog Grid -->
             <article class="card mb-3">
-              <img class="card-img-top" src="../../assets/img/500x250/img11.jpg" alt="Image Description">
+              <img class="card-img-top" src="<%= post.image %>" alt="Image Description">
               <div class="card-body p-5">
                 <small class="d-block text-muted mb-2"><%= post.date.strftime("%B %e, %Y")  %></small>
                 <h3 class="h5">
