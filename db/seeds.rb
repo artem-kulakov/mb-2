@@ -27,7 +27,8 @@
 
 Post.all.each do |post|
   post.update(
-    image: "/assets/img/500x250/img#{1+rand(14)}.jpg"
+    # image: "/assets/img/500x250/img#{1+rand(14)}.jpg",
+    category: rand(6)
   )
 end
 
