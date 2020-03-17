@@ -6,6 +6,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @recent_posts = Post.order(:date).last(4)
+    @categories = Post.categories.to_hash
   end
 
   # GET /posts/1
