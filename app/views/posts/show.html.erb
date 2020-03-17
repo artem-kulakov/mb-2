@@ -10,14 +10,14 @@
         <div class="w-lg-60 text-center mx-lg-auto mb-9">
           <!-- Title -->
           <div class="mb-7">
-            <h1 class="display-4 font-size-48--md-down text-white mb-4">How guilty should I feel?</h1>
-            <p class="lead text-white">The people who sing odes to my profession's nobility are usually not journalists themselves.</p>
+            <h1 class="display-4 font-size-48--md-down text-white mb-4"><%= @post.title %></h1>
+            <p class="lead text-white"><%= @post.subtitle %></p>
           </div>
           <!-- End Title -->
 
           <!-- Author -->
-          <img class="u-avatar rounded-circle mb-3" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
-          <h2 class="h6 text-white">Maria Muszynska</h2>
+          <img class="u-avatar rounded-circle mb-3" src="<%= @post.user.image || @post.user.default_image %>" alt="Image Description">
+          <h2 class="h6 text-white"><%= @post.user.full_name %></h2>
           <!-- End Author -->
         </div>
       </div>

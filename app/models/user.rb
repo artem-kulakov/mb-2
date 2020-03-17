@@ -6,4 +6,8 @@ class User < ApplicationRecord
   def full_name
     first_name + ' ' + last_name
   end
+
+  def default_image
+    "/assets/img/100x100/img18.jpg"
+  end
 end
