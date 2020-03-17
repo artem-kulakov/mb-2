@@ -8,13 +8,12 @@ class PostsController < ApplicationController
     @categories = Post.categories
 
     if category = params[:category]
-      @posts = Post.where(category: category)
+      @posts = Post.where(category: category).page(params[:page]).per(4)
       @title = 'Posts of category ' + @categories.key(category.to_i)
     else
-      @posts = Post.all
+      @posts = Post.page(params[:page]).per(4)
       @title = "All posts"
     end
-    @posts = @posts.page(params[:page]).per(6)
   end
 
   # GET /posts/1
