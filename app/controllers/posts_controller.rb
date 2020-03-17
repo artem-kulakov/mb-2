@@ -14,6 +14,7 @@ class PostsController < ApplicationController
       @posts = Post.all
       @title = "All posts"
     end
+    @posts = @posts.page(params[:page]).per(10)
   end
 
   # GET /posts/1
