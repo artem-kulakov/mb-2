@@ -1,29 +1,432 @@
-<p id="notice"><%= notice %></p>
+<!-- ========== MAIN CONTENT ========== -->
+<main id="content">
+  <!-- Hero Section -->
+  <div class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll" data-options='{direction: "normal"}'>
+    <!-- Apply your Parallax background image here -->
+    <div class="divimage dzsparallaxer--target gradient-overlay-half-dark-v2" style="height: 120%; background-image: url(../../assets/img/1920x1080/img29.jpg);"></div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+    <div class="d-flex align-items-end height-600 position-relative z-index-2">
+      <div class="container">
+        <div class="w-lg-60 text-center mx-lg-auto mb-9">
+          <!-- Title -->
+          <div class="mb-7">
+            <h1 class="display-4 font-size-48--md-down text-white mb-4">How guilty should I feel?</h1>
+            <p class="lead text-white">The people who sing odes to my profession's nobility are usually not journalists themselves.</p>
+          </div>
+          <!-- End Title -->
 
-<p>
-  <strong>Subtitle:</strong>
-  <%= @post.subtitle %>
-</p>
+          <!-- Author -->
+          <img class="u-avatar rounded-circle mb-3" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
+          <h2 class="h6 text-white">Maria Muszynska</h2>
+          <!-- End Author -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Hero Section -->
 
-<p>
-  <strong>User:</strong>
-  <%= @post.user_id %>
-</p>
+  <!-- Article Content Section -->
+  <div class="container space-2 space-3-bottom--lg">
+    <div class="row">
+      <div class="col-lg-9 mb-9 mb-lg-0">
+        <!-- Info -->
+        <ul class="list-inline text-secondary mb-9">
+          <li class="list-inline-item mr-4">
+            <i class="far fa-calendar-alt mr-2"></i>
+            August 15, 2018
+          </li>
+          <li class="list-inline-item mr-4">
+            <i class="far fa-folder-open mr-2"></i>
+            <a href="#">Business</a>
+          </li>
+        </ul>
+        <!-- End Info -->
 
-<p>
-  <strong>Date:</strong>
-  <%= @post.date %>
-</p>
+        <!-- Description -->
+        <div class="mb-9">
+          <p>I often feel guilt when I assign a story. This is partly a function of being a woman who would, if she had her way, please and comfort her entire universe of acquaintances, and partly a function of having been convinced at a relatively young age by the argument that Janet Malcolm famously made in <em>The Journalist and the Murderer</em>: "Every journalist who is not too stupid or full of himself to notice what is going on knows that what he does is morally indefensible."</p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @post.body %>
-</p>
+          <p>She's right, of course. The people who sing odes to my profession's nobility are usually not journalists themselves. Peter Thiel is certainly not. He wrote in the <em>New York Times</em> op-ed section last week: "The press is too important to let its role be undermined by those who would search for clicks at the cost of the profession's reputation."</p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+          <div class="clearfix">
+            <img class="img-fluid w-50 float-left mb-3 mr-3" src="../../assets/img/500x450/img1.jpg" alt="Image Description">
+
+            <p>Thiel wrote that about Gawker, a place that is gone now, or will be tomorrow. Since we learned of Thiel's <a href="#">covert campaign to bring financial ruin upon Gawker</a>, the people who work here have done whatever we could to answer for our sins—feeling, as we often did, that those sins weren't ours alone. Says Malcolm, "Journalists justify their treachery in various ways according to their temperaments. The more pompous talk about freedom of speech and 'the public's right to know'; the least talented talk about Art; the seemliest murmur about earning a living."</p>
+
+            <p>I was the deputy editor of Gawker for four months, and in that time I enjoyed maybe three days without admonition from my own conscience over how I earned a paycheck. My guilt wasn't exactly Gawker-specific: I would have felt self-recrimination anywhere I worked because I blush when I tattle, and journalism, no matter where, can sometimes feel a whole lot like tattling. Before Gawker, I spent about five years at the <em>New Yorker</em>, where I felt some measure of guilt, too, but it wasn't so acute. I was more junior there, and the magazine has earned itself a sterling reputation, which generally keeps it above the ethical fray that Gawker is not only subjected to, but often courts. To me, though, that was part of the appeal of my new job. I looked forward to the challenge of publishing stories without the protection that a more meritorious reputation might have allowed. And we occasionally did that, sure. But it is easy enough to isolate our best stories from criticism with high-mindedness about bravery and Malcolmian ethics. In fact, quotidian posts that neither ruin a writer's career nor make it are what fill most hours of blogging life. They do have consequences, though, and this is a story about that.</p>
+          </div>
+
+          <p>The failure of the force-focus technique lies in old habits; it's like when we were told to read something as a child. We will do it, but because we were forced to do so, we purposefully won't retain the information, just to prove the point.</p>
+
+          <p>Why? Let's suppose a user went through the onboarding process and even <em>listened</em> to what they were told. This is not the case most of the time as it has been mentioned previously, but let's ignore that for now. People then use your app, but eventually it will be closed, after they finished with the task that required the app in the first place. Let's assume they won't use it again for a couple of days or even a couple of weeks. Users open it up again and then what? Are they going to be shown the onboarding screens again? By that point, they are basically a "new user" again, hence they would require your onboarding to understand how to use the app. The application — of course — treats them as returning users and won't explain anything. The users end up being confused at first and then frustrated, ultimately leaving the app behind.</p>
+        </div>
+        <!-- End Description -->
+
+        <!-- Tags -->
+        <div class="mb-7">
+          <a class="u-label u-label--dark u-label--sm mr-2" href="#">Business</a>
+          <a class="u-label u-label--dark u-label--sm mr-2" href="#">Coffee</a>
+          <a class="u-label u-label--dark u-label--sm mr-2" href="#">Finance</a>
+        </div>
+        <!-- End Tags -->
+
+        <!-- Social Networks -->
+        <div class="d-flex align-items-center">
+          <h3 class="h6 d-inline-block text-uppercase mr-3 mb-0">Share:</h3>
+
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mb-2">
+              <a class="u-icon u-icon--secondary u-icon--sm" href="#">
+                <i class="fab fa-facebook-f u-icon__inner"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mb-2">
+              <a class="u-icon u-icon--secondary u-icon--sm" href="#">
+                <i class="fab fa-google u-icon__inner"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mb-2">
+              <a class="u-icon u-icon--secondary u-icon--sm" href="#">
+                <i class="fab fa-twitter u-icon__inner"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mb-2">
+              <a class="u-icon u-icon--secondary u-icon--sm" href="#">
+                <i class="fab fa-pinterest u-icon__inner"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mb-2">
+              <a class="u-icon u-icon--secondary u-icon--sm" href="#">
+                <i class="fab fa-get-pocket u-icon__inner"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mb-2">
+              <a class="u-icon u-icon--secondary u-icon--sm" href="#">
+                <i class="fab fa-telegram-plane u-icon__inner"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mb-2">
+              <a class="u-icon u-icon--secondary u-icon--sm" href="#">
+                <i class="fab fa-slack-hash u-icon__inner"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- End Social Networks -->
+
+        <hr class="my-8">
+
+        <!-- Author -->
+        <div class="media">
+          <img class="u-lg-avatar rounded-circle mr-4" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
+          <div class="media-body">
+            <h4 class="h5">Maria Muszynska</h4>
+            <p>I am an ambitious workaholic, but apart from that, pretty simple person. Whether it's branding, print, UI + UX I've got you covered. I strive to figure out the right solutions for your look to stand out amongst the rest.</p>
+            <a class="btn btn-sm btn-secondary" href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/">All Author Posts</a>
+          </div>
+        </div>
+        <!-- End Author -->
+      </div>
+
+      <div class="col-lg-3">
+        <!-- Search Input -->
+        <form class="js-focus-state input-group input-group-sm form form--sm mb-7">
+          <input type="text" class="form-control form__input" name="search"
+                 placeholder="Search Space"
+                 aria-label="Search Space">
+          <span class="input-group-append form__append">
+            <button type="submit" class="btn btn-primary">Go</button>
+          </span>
+        </form>
+        <!-- End Search Input -->
+
+        <!-- Instagram -->
+        <div class="mb-7">
+          <h3 class="h5 mb-3">Instagram</h3>
+
+          <div class="border rounded p-4">
+            <!-- Instafeed -->
+            <div id="instaFeed" class="js-instagram row mx-gutters-2"
+                 data-user-id="4815936096"
+                 data-client-id="60648b9247324e87a4d7ab3aa7a58f6c"
+                 data-token="4815936096.1677ed0.1cbcaacad4de4ffa96aa15ec76e0e5ce"
+                 data-limit="6"
+                 data-template='<div class="col-4 mb-3"><div class="border rounded p-1"><a href="{{link}}" target="_blank"><img class="img-fluid w-100" src="{{image}}" /></a></div></div>'></div>
+            <!-- End Instafeed -->
+          </div>
+        </div>
+        <!-- End Instagram -->
+
+        <!-- Recent Posts -->
+        <div class="mb-7">
+          <h3 class="h5 mb-3">Recent posts</h3>
+
+          <div class="border rounded p-4">
+            <!-- Recent Posts List -->
+            <ul class="list-unstyled">
+              <li class="py-1"><a class="text-secondary" href="#">Remote workers, here's how to dodge distractions</a></li>
+              <li class="dropdown-divider"></li>
+              <li class="py-1"><a class="text-secondary" href="#">Create your adventure</a></li>
+              <li class="dropdown-divider"></li>
+              <li class="py-1"><a class="text-secondary" href="#">How to change careers or start a home-based business?</a></li>
+              <li class="dropdown-divider"></li>
+              <li class="py-1"><a class="text-secondary" href="#">Classic design principles</a></li>
+            </ul>
+            <!-- End Recent Posts List -->
+          </div>
+        </div>
+        <!-- End Recent Posts -->
+
+        <!-- Categories -->
+        <div class="mb-7">
+          <h3 class="h5 mb-3">Categories</h3>
+
+          <div class="border rounded p-4">
+            <!-- Categories List -->
+            <ul class="list-unstyled">
+              <li class="py-1"><a class="text-secondary" href="#">Design</a></li>
+              <li class="dropdown-divider"></li>
+              <li class="py-1"><a class="text-secondary" href="#">Art</a></li>
+              <li class="dropdown-divider"></li>
+              <li class="py-1"><a class="text-secondary" href="#">Graphic</a></li>
+              <li class="dropdown-divider"></li>
+              <li class="py-1"><a class="text-secondary" href="#">WordPress</a></li>
+              <li class="dropdown-divider"></li>
+              <li class="py-1"><a class="text-secondary" href="#">HTML/CSS</a></li>
+              <li class="dropdown-divider"></li>
+              <li class="py-1"><a class="text-secondary" href="#">SASS</a></li>
+            </ul>
+            <!-- End Categories List -->
+          </div>
+        </div>
+        <!-- End Categories -->
+      </div>
+    </div>
+  </div>
+  <!-- End Article Content Section -->
+
+  <!-- Related News Section -->
+  <div class="bg-gray-100">
+    <div class="container space-2 space-3--lg">
+      <!-- Title -->
+      <div class="w-md-80 w-lg-60 text-center mx-auto mb-7">
+        <h2 class="h3">Got another minute? Check out:</h2>
+      </div>
+      <!-- End Title -->
+
+      <div class="card-deck d-block d-lg-flex">
+        <!-- Blog Grid -->
+        <article class="card mb-4 mb-lg-0">
+          <div class="card-body p-5">
+            <small class="d-block text-muted mb-2">May 15, 2018</small>
+            <h3 class="h5">
+              <a href="../blog/single-article-classic.html">InVision design forward fund</a>
+            </h3>
+            <p class="mb-0">Clark Valberg is the founder and CEO of InVision.</p>
+          </div>
+          <div class="card-footer py-4 px-5">
+            <div class="media">
+              <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
+              <div class="media-body">
+                <h4 class="d-inline-block mb-0">
+                  <a class="d-block font-size-13" href="#">Andrea Gard</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- End Blog Grid -->
+
+        <!-- Blog Grid -->
+        <article class="card mb-4 mb-lg-0">
+          <div class="card-body p-5">
+            <small class="d-block text-muted mb-2">May 22, 2018</small>
+            <h3 class="h5">
+              <a href="../blog/single-article-classic.html">Announcing a plan for small teams</a>
+            </h3>
+            <p class="mb-0">We've always believed that by providing a space</p>
+          </div>
+          <div class="card-footer py-4 px-5">
+            <div class="media">
+              <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img3.jpg" alt="Image Description">
+              <div class="media-body">
+                <h4 class="d-inline-block mb-0">
+                  <a class="d-block font-size-13" href="#">James Austin</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- End Blog Grid -->
+
+        <!-- Blog Grid -->
+        <article class="card mb-4 mb-lg-0">
+          <div class="card-body p-5">
+            <small class="d-block text-muted mb-2">May 30, 2018</small>
+            <h3 class="h5">
+              <a href="../blog/single-article-classic.html">Design principles</a>
+            </h3>
+            <p class="mb-0">The biggest collections of design principles on the internet</p>
+          </div>
+          <div class="card-footer py-4 px-5">
+            <div class="media">
+              <img class="u-sm-avatar rounded-circle mr-3" src="../../assets/img/100x100/img2.jpg" alt="Image Description">
+              <div class="media-body">
+                <h4 class="d-inline-block mb-0">
+                  <a class="d-block font-size-13" href="#">Charlotte Moore</a>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- End Blog Grid -->
+      </div>
+    </div>
+  </div>
+  <!-- Related News Section -->
+
+  <!-- Comments Section -->
+  <div class="container space-2 space-3--lg">
+    <div class="w-lg-60 mx-auto">
+      <h4 class="h6">25 Comments</h4>
+
+      <hr class="mb-6">
+
+      <!-- Comments -->
+      <div>
+        <!-- Author -->
+        <div class="media mb-3">
+          <img class="img-fluid u-avatar rounded-circle mr-3" src="../../assets/img/100x100/img3.jpg" alt="Image Description">
+          <div class="media-body">
+            <h4 class="d-inline-block mb-1">
+              <a class="d-block h6 mb-0" href="#">Russel Fernandes</a>
+            </h4>
+            <small class="d-block text-muted">3 hours ago.</small>
+          </div>
+        </div>
+        <!-- End Author -->
+
+        <p>Since our attention spans seem to be shrinking by the day — keeping it simple is more important than ever.</p>
+
+        <!-- Likes/Reply -->
+        <ul class="list-inline d-flex">
+          <li class="list-inline-item">
+            <a class="text-secondary" href="#">
+              17
+              <i class="far fa-thumbs-up ml-1"></i>
+            </a>
+          </li>
+          <li class="list-inline-item ml-3">
+            <a class="text-secondary" href="#">
+              0
+              <i class="far fa-thumbs-down ml-1"></i>
+            </a>
+          </li>
+          <li class="list-inline-item ml-auto">
+            <a class="text-secondary" href="#">
+              <i class="far fa-comments mr-1"></i>
+              Reply
+            </a>
+          </li>
+        </ul>
+        <!-- End Likes/Reply -->
+      </div>
+      <!-- End Comments -->
+
+      <hr class="my-6">
+
+      <!-- Comments -->
+      <div class="mb-7">
+        <!-- Author -->
+        <div class="media mb-3">
+          <img class="img-fluid u-avatar rounded-circle mr-3" src="../../assets/img/100x100/img2.jpg" alt="Image Description">
+          <div class="media-body">
+            <h4 class="d-inline-block mb-1">
+              <a class="d-block h6 mb-0" href="#">Elizabeth Lord</a>
+            </h4>
+            <small class="d-block text-muted">1 day ago.</small>
+          </div>
+        </div>
+        <!-- End Author -->
+
+        <p>As aSpecial Education teacher this resonates so well with me. Fighting with gen ed teachers to flatten for the students with learning disabilities. It also confirms some things for me in my writing.</p>
+
+        <!-- Likes/Reply -->
+        <ul class="list-inline d-flex">
+          <li class="list-inline-item">
+            <a class="text-secondary" href="#">
+              17
+              <i class="far fa-thumbs-up ml-1"></i>
+            </a>
+          </li>
+          <li class="list-inline-item ml-3">
+            <a class="text-secondary" href="#">
+              0
+              <i class="far fa-thumbs-down ml-1"></i>
+            </a>
+          </li>
+          <li class="list-inline-item ml-auto">
+            <a class="text-secondary" href="#">
+              <i class="far fa-comments mr-1"></i>
+              Reply
+            </a>
+          </li>
+        </ul>
+        <!-- End Likes/Reply -->
+      </div>
+      <!-- End Comments -->
+
+      <a class="btn btn-block btn-dark" href="#">Load More</a>
+    </div>
+  </div>
+  <!-- End Comments Section -->
+
+  <!-- Responsive Section -->
+  <div class="bg-gray-100">
+    <div class="container">
+      <div class="row justify-content-lg-between align-items-lg-start">
+        <div class="col-lg-6 space-2 space-3--lg">
+          <!-- Title -->
+          <div class="mb-7">
+            <span class="u-label u-label--sm u-label--purple mb-3">Space on the go</span>
+            <h2>Space on mobile</h2>
+            <p>Don't miss out because you're on the move. Stay connected and collaborate with your team from anywhere with notifications, comments, and project activity. Download Space for iPhone or Space for Android.</p>
+          </div>
+          <!-- End Title -->
+
+          <!-- Button -->
+          <button type="button" class="btn btn-xs btn-dark text-left mb-2 mb-md-0 mr-md-2">
+            <span class="media align-items-center">
+              <i class="fab fa-apple fa-3x mr-3"></i>
+              <span class="d-block">
+                <span class="d-block">Download on the</span>
+                <strong class="d-block font-size-14">App Store</strong>
+              </span>
+            </span>
+          </button>
+          <!-- End Button -->
+
+          <!-- Button -->
+          <button type="button" class="btn btn-xs btn-dark text-left mb-2 mb-md-0">
+            <span class="media align-items-center">
+              <i class="fab fa-google-play fa-3x mr-3"></i>
+              <span class="d-block">
+                <span class="d-block">Get it on</span>
+                <strong class="d-block font-size-14">Google Play</strong>
+              </span>
+            </span>
+          </button>
+          <!-- End Button -->
+        </div>
+
+        <div class="col-lg-4 text-center mt-lg-auto">
+          <!-- SVG Mockup -->
+          <object type="image/svg+xml" data="../../assets/svg/mockups/phone-mockup-1.svg" class="w-75 w-sm-100 max-width-sm-40"></object>
+          <!-- End SVG Mockup -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Responsive Section -->
+</main>
+<!-- ========== END MAIN CONTENT ========== -->
