@@ -18,7 +18,7 @@
               <div class="card-body p-5">
                 <small class="d-block text-muted mb-2"><%= post.date.strftime("%B %e, %Y")  %></small>
                 <h3 class="h5">
-                  <a href="single-article-classic.html"><%= post.title %></a>
+                  <%= link_to post.title, post %>
                 </h3>
                 <p><%= post.subtitle %></p>
               </div>
@@ -27,7 +27,7 @@
                   <img class="u-sm-avatar rounded-circle mr-3" src="<%= post.user.image || "/assets/img/100x100/img18.jpg" %>" alt="Image Description">
                   <div class="media-body">
                     <h4 class="d-inline-block mb-0">
-                      <a class="d-block font-size-13" href="single-article-classic.html"><%= post.user.first_name + ' ' + post.user.last_name %></a>
+                      <%= link_to post.user.full_name, post, class: "d-block font-size-13" %>
                     </h4>
                   </div>
                 </div>
