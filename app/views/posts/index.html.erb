@@ -94,7 +94,9 @@
             <!-- Categories List -->
             <ul class="list-unstyled">
               <% @categories.each_with_index do |category, index| %>
-                <li class="py-1"><a class="text-secondary" href="#"><%= category.first %></a></li>
+                <li class="py-1">
+                  <%= link_to category.first, posts_path(category: category.second), class: "text-secondary" %>
+                </li>
                 <% unless index == @categories.length - 1 %>
                   <li class="dropdown-divider"></li>
                 <% end %>
