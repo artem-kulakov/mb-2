@@ -4,14 +4,16 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    if category = params[:category]
-      @posts = Post.where(category: category)
-    else
-      @posts = Post.all
-    end
-
     @recent_posts = Post.order(:date).last(4)
     @categories = Post.categories
+
+    if category = params[:category]
+      @posts = Post.where(category: category)
+      @title = 'Posts of category ' + @categories.key(category.to_i)
+    else
+      @posts = Post.all
+      @title = "All posts"
+    end
   end
 
   # GET /posts/1
