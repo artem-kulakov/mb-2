@@ -40,6 +40,24 @@
         <!-- Navigation -->
         <div id="navBar" class="collapse navbar-collapse u-header__navbar-collapse py-0">
           <ul class="navbar-nav u-header__navbar-nav">
+            <!-- Blog -->
+            <li class="nav-item u-header__nav-item"
+                data-event="hover"
+                data-animation-in="fadeInUp"
+                data-animation-out="fadeOut">
+              <%= link_to 'Blog', posts_path, class: "nav-link u-header__nav-link", 'aria-haspopup': "false", 'aria-expanded': "false" %>
+            </li>
+            <!-- End Blog -->
+
+            <!-- Checkout -->
+            <li class="nav-item u-header__nav-item"
+                data-event="hover"
+                data-animation-in="fadeInUp"
+                data-animation-out="fadeOut">
+              <%= link_to 'Checkout', checkout_user_info_path, class: "nav-link u-header__nav-link", 'aria-haspopup': "false", 'aria-expanded': "false" %>
+            </li>
+            <!-- End Checkout -->
+
             <!-- Home -->
             <li class="nav-item hs-has-sub-menu u-header__nav-item"
                 data-event="hover"
