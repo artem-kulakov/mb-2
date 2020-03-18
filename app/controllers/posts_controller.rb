@@ -7,14 +7,16 @@ class PostsController < ApplicationController
     @recent_posts = Post.order(:date).last(4)
     @categories = Post.categories
 
+    per_pages = 12
+
     if category = params[:category]
-      @posts = Post.where(category: category).page(params[:page]).per(4)
+      @posts = Post.where(category: category).page(params[:page]).per(per_pages)
       @title = 'Posts of category ' + @categories.key(category.to_i)
     elsif user_id = params[:user]
-      @posts = Post.where(user_id: user_id).page(params[:page]).per(4)
+      @posts = Post.where(user_id: user_id).page(params[:page]).per(per_pages)
       @title = 'All Posts of ' + User.find(user_id).full_name
     else
-      @posts = Post.page(params[:page]).per(4)
+      @posts = Post.page(params[:page]).per(per_pages)
       @title = "All posts"
     end
   end

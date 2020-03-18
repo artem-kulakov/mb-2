@@ -3,7 +3,7 @@
   <!-- Hero Section -->
   <div class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll" data-options='{direction: "normal"}'>
     <!-- Apply your Parallax background image here -->
-    <div class="divimage dzsparallaxer--target gradient-overlay-half-dark-v2" style="height: 120%; background-image: url(<%= @post.hero_image %>);"></div>
+    <div class="divimage dzsparallaxer--target gradient-overlay-half-dark-v2" style="height: 120%; background-image: url(<%= @post.hero %>);"></div>
 
     <div class="d-flex align-items-end height-600 position-relative z-index-2">
       <div class="container">
@@ -16,7 +16,7 @@
           <!-- End Title -->
 
           <!-- Author -->
-          <img class="u-avatar rounded-circle mb-3" src="<%= @post.user.pic %>" alt="Image Description">
+          <img class="u-avatar rounded-circle mb-3" src="<%= @post.user.image %>" alt="Image Description">
           <h2 class="h6 text-white"><%= @post.user.full_name %></h2>
           <!-- End Author -->
         </div>
@@ -52,7 +52,7 @@
 
         <!-- Author -->
         <div class="media">
-          <img class="u-lg-avatar rounded-circle mr-4" src="<%= @post.user.pic %>" alt="Image Description">
+          <img class="u-lg-avatar rounded-circle mr-4" src="<%= @post.user.image %>" alt="Image Description">
           <div class="media-body">
             <h4 class="h5"><%= @post.user.full_name %></h4>
             <p><%= @post.user.bio %></p>
@@ -93,7 +93,7 @@
             </div>
             <div class="card-footer py-4 px-5">
               <div class="media">
-                <img class="u-sm-avatar rounded-circle mr-3" src="<%= post.user.pic %>" alt="Image Description">
+                <img class="u-sm-avatar rounded-circle mr-3" src="<%= post.user.image %>" alt="Image Description">
                 <div class="media-body">
                   <h4 class="d-inline-block mb-0">
                     <a class="d-block font-size-13" href="#"><%= post.user.full_name %></a>

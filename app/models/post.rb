@@ -10,8 +10,8 @@ class Post < ApplicationRecord
     'SASS'
   ]
 
-  def hero_image
-    hero || "/assets/img/1920x1080/img29.jpg"
+  def hero
+    self[:hero] || "/assets/img/1920x1080/img29.jpg"
   end
 
   def formatted_date

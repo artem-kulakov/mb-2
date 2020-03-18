@@ -8,7 +8,7 @@ class User < ApplicationRecord
     first_name + ' ' + last_name
   end
 
-  def pic
-    image || "/assets/img/100x100/img18.jpg"
+  def image
+    self[:image] || "/assets/img/100x100/img18.jpg"
   end
 end
