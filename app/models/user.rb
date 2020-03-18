@@ -3,11 +3,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
   def full_name
     first_name + ' ' + last_name
   end
 
-  def default_image
-    "/assets/img/100x100/img18.jpg"
+  def pic
+    image || "/assets/img/100x100/img18.jpg"
   end
 end

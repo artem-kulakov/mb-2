@@ -16,7 +16,7 @@
           <!-- End Title -->
 
           <!-- Author -->
-          <img class="u-avatar rounded-circle mb-3" src="<%= @post.user.image || @post.user.default_image %>" alt="Image Description">
+          <img class="u-avatar rounded-circle mb-3" src="<%= @post.user.pic %>" alt="Image Description">
           <h2 class="h6 text-white"><%= @post.user.full_name %></h2>
           <!-- End Author -->
         </div>
@@ -52,7 +52,7 @@
 
         <!-- Author -->
         <div class="media">
-          <img class="u-lg-avatar rounded-circle mr-4" src="<%= @post.user.image %>" alt="Image Description">
+          <img class="u-lg-avatar rounded-circle mr-4" src="<%= @post.user.pic %>" alt="Image Description">
           <div class="media-body">
             <h4 class="h5"><%= @post.user.full_name %></h4>
             <p><%= @post.user.bio %></p>
