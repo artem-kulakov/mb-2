@@ -16,7 +16,7 @@
             <article class="card mb-3">
               <img class="card-img-top" src="<%= post.image %>" alt="Image Description">
               <div class="card-body p-5">
-                <small class="d-block text-muted mb-2"><%= post.date.strftime("%B %e, %Y")  %></small>
+                <small class="d-block text-muted mb-2"><%= post.formatted_date %></small>
                 <h3 class="h5">
                   <%= link_to post.title, post %>
                 </h3>
