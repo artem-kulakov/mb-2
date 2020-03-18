@@ -24,6 +24,11 @@ class PostsController < ApplicationController
   def show
     @recent_posts = Post.order(:date).last(4)
     @categories = Post.categories
+
+    @suggested_posts = Post.where(category: @post.category).order(:date).last(3)
+    if @suggested_posts.count < 3
+      @suggested_posts = Post.order(:date).last(3)
+    end
   end
 
   # GET /posts/new
