@@ -37,7 +37,7 @@
           </li>
           <li class="list-inline-item mr-4">
             <i class="far fa-folder-open mr-2"></i>
-            <a href="#">Business</a>
+            <%= link_to @post.category, posts_path(category: @post.category) %>
           </li>
         </ul>
         <!-- End Info -->
