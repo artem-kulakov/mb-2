@@ -9,4 +9,8 @@ class Post < ApplicationRecord
     'HTML/CSS',
     'SASS'
   ]
+
+  def default_hero
+    "/assets/img/1920x1080/img29.jpg"
+  end
 end
