@@ -45,14 +45,20 @@
 #   )
 # end
 
-user_ids = (User.pluck(:id) * 40).shuffle
-post_ids = (User.pluck(:id) * 40).shuffle
+# user_ids = (User.pluck(:id) * 40).shuffle
+# post_ids = (User.pluck(:id) * 40).shuffle
 
-400.times do
-  Comment.create(
-    user_id: user_ids.pop,
-    body: Faker::Lorem.sentence(word_count: 50),
-    post_id: post_ids.pop,
-    created_at: Faker::Date.backward(days: 90)
+# 400.times do
+#   Comment.create(
+#     user_id: user_ids.pop,
+#     body: Faker::Lorem.sentence(word_count: 50),
+#     post_id: post_ids.pop,
+#     created_at: Faker::Date.backward(days: 90)
+#   )
+# end
+
+Comment.all.each do |comment|
+  comment.update(
+    body: Faker::Lorem.sentence(word_count: 10, random_words_to_add: 40)
   )
 end

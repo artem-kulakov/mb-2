@@ -32,7 +32,7 @@ class PostsController < ApplicationController
       @suggested_posts = Post.order(:date).last(3)
     end
 
-    @comments = @post.comments
+    @comments = @post.comments.order(created_at: :desc)
   end
 
   # GET /posts/new

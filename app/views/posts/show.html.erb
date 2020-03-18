@@ -116,89 +116,50 @@
 
       <hr class="mb-6">
 
-      <!-- Comments -->
-      <div>
-        <!-- Author -->
-        <div class="media mb-3">
-          <img class="img-fluid u-avatar rounded-circle mr-3" src="../../assets/img/100x100/img3.jpg" alt="Image Description">
-          <div class="media-body">
-            <h4 class="d-inline-block mb-1">
-              <a class="d-block h6 mb-0" href="#">Russel Fernandes</a>
-            </h4>
-            <small class="d-block text-muted">3 hours ago.</small>
+      <% @comments.each do |comment| %>
+        <!-- Comments -->
+        <div>
+          <!-- Author -->
+          <div class="media mb-3">
+            <img class="img-fluid u-avatar rounded-circle mr-3" src="<%= comment.user.image %>" alt="Image Description">
+            <div class="media-body">
+              <h4 class="d-inline-block mb-1">
+                <a class="d-block h6 mb-0" href="#"><%= comment.user.full_name %></a>
+              </h4>
+              <small class="d-block text-muted"><%= time_ago_in_words comment.created_at %> ago</small>
+            </div>
           </div>
+          <!-- End Author -->
+
+          <p><%= comment.body %></p>
+
+          <!-- Likes/Reply -->
+          <ul class="list-inline d-flex">
+            <li class="list-inline-item">
+              <a class="text-secondary" href="#">
+                17
+                <i class="far fa-thumbs-up ml-1"></i>
+              </a>
+            </li>
+            <li class="list-inline-item ml-3">
+              <a class="text-secondary" href="#">
+                0
+                <i class="far fa-thumbs-down ml-1"></i>
+              </a>
+            </li>
+            <li class="list-inline-item ml-auto">
+              <a class="text-secondary" href="#">
+                <i class="far fa-comments mr-1"></i>
+                Reply
+              </a>
+            </li>
+          </ul>
+          <!-- End Likes/Reply -->
         </div>
-        <!-- End Author -->
+        <!-- End Comments -->
 
-        <p>Since our attention spans seem to be shrinking by the day — keeping it simple is more important than ever.</p>
-
-        <!-- Likes/Reply -->
-        <ul class="list-inline d-flex">
-          <li class="list-inline-item">
-            <a class="text-secondary" href="#">
-              17
-              <i class="far fa-thumbs-up ml-1"></i>
-            </a>
-          </li>
-          <li class="list-inline-item ml-3">
-            <a class="text-secondary" href="#">
-              0
-              <i class="far fa-thumbs-down ml-1"></i>
-            </a>
-          </li>
-          <li class="list-inline-item ml-auto">
-            <a class="text-secondary" href="#">
-              <i class="far fa-comments mr-1"></i>
-              Reply
-            </a>
-          </li>
-        </ul>
-        <!-- End Likes/Reply -->
-      </div>
-      <!-- End Comments -->
-
-      <hr class="my-6">
-
-      <!-- Comments -->
-      <div class="mb-7">
-        <!-- Author -->
-        <div class="media mb-3">
-          <img class="img-fluid u-avatar rounded-circle mr-3" src="../../assets/img/100x100/img2.jpg" alt="Image Description">
-          <div class="media-body">
-            <h4 class="d-inline-block mb-1">
-              <a class="d-block h6 mb-0" href="#">Elizabeth Lord</a>
-            </h4>
-            <small class="d-block text-muted">1 day ago.</small>
-          </div>
-        </div>
-        <!-- End Author -->
-
-        <p>As aSpecial Education teacher this resonates so well with me. Fighting with gen ed teachers to flatten for the students with learning disabilities. It also confirms some things for me in my writing.</p>
-
-        <!-- Likes/Reply -->
-        <ul class="list-inline d-flex">
-          <li class="list-inline-item">
-            <a class="text-secondary" href="#">
-              17
-              <i class="far fa-thumbs-up ml-1"></i>
-            </a>
-          </li>
-          <li class="list-inline-item ml-3">
-            <a class="text-secondary" href="#">
-              0
-              <i class="far fa-thumbs-down ml-1"></i>
-            </a>
-          </li>
-          <li class="list-inline-item ml-auto">
-            <a class="text-secondary" href="#">
-              <i class="far fa-comments mr-1"></i>
-              Reply
-            </a>
-          </li>
-        </ul>
-        <!-- End Likes/Reply -->
-      </div>
-      <!-- End Comments -->
+        <hr class="my-6">
+      <% end %>
 
       <a class="btn btn-block btn-dark" href="#">Load More</a>
     </div>
