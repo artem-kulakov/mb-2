@@ -36,11 +36,23 @@
 
 # indexes = [1,2,3,4,14,15,16,17]
 
-User.all.each do |user|
-  user.update(
+# User.all.each do |user|
+#   user.update(
 #     first_name: Faker::Name.first_name,
 #     last_name: Faker::Name.last_name,
-    # image: "/assets/img/100x100/img#{indexes.sample}.jpg",
-    bio: Faker::Lorem.sentence(word_count: 50)
+#     image: "/assets/img/100x100/img#{indexes.sample}.jpg",
+#     bio: Faker::Lorem.sentence(word_count: 50)
+#   )
+# end
+
+user_ids = (User.pluck(:id) * 40).shuffle
+post_ids = (User.pluck(:id) * 40).shuffle
+
+400.times do
+  Comment.create(
+    user_id: user_ids.pop,
+    body: Faker::Lorem.sentence(word_count: 50),
+    post_id: post_ids.pop,
+    created_at: Faker::Date.backward(days: 90)
   )
 end
