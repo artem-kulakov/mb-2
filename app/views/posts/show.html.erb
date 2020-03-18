@@ -52,9 +52,9 @@
 
         <!-- Author -->
         <div class="media">
-          <img class="u-lg-avatar rounded-circle mr-4" src="../../assets/img/100x100/img1.jpg" alt="Image Description">
+          <img class="u-lg-avatar rounded-circle mr-4" src="<%= @post.user.image %>" alt="Image Description">
           <div class="media-body">
-            <h4 class="h5">Maria Muszynska</h4>
+            <h4 class="h5"><%= @post.user.full_name %></h4>
             <p>I am an ambitious workaholic, but apart from that, pretty simple person. Whether it's branding, print, UI + UX I've got you covered. I strive to figure out the right solutions for your look to stand out amongst the rest.</p>
             <a class="btn btn-sm btn-secondary" href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/">All Author Posts</a>
           </div>
