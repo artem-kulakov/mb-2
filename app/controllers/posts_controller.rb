@@ -10,6 +10,9 @@ class PostsController < ApplicationController
     if category = params[:category]
       @posts = Post.where(category: category).page(params[:page]).per(4)
       @title = 'Posts of category ' + @categories.key(category.to_i)
+    elsif user_id = params[:user]
+      @posts = Post.where(user_id: user_id).page(params[:page]).per(4)
+      @title = 'All Posts of ' + User.find(user_id).full_name
     else
       @posts = Post.page(params[:page]).per(4)
       @title = "All posts"

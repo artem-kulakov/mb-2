@@ -56,7 +56,7 @@
           <div class="media-body">
             <h4 class="h5"><%= @post.user.full_name %></h4>
             <p><%= @post.user.bio %></p>
-            <a class="btn btn-sm btn-secondary" href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/">All Author Posts</a>
+            <%= link_to 'All Author Posts', posts_path(user: @post.user.id), class: "btn btn-sm btn-secondary" %>
           </div>
         </div>
         <!-- End Author -->
