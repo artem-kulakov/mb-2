@@ -31,6 +31,8 @@ class PostsController < ApplicationController
     if @suggested_posts.count < 3
       @suggested_posts = Post.order(:date).last(3)
     end
+
+    @comments = @post.comments
   end
 
   # GET /posts/new
