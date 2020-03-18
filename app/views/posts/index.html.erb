@@ -47,47 +47,9 @@
       </div>
 
       <div class="col-lg-3 order-lg-1">
-        <!-- Recent Posts -->
-        <div class="mb-7">
-          <h3 class="h5 mb-3">Recent posts</h3>
+        <%= render 'recent_posts' %>
 
-          <div class="border rounded p-4">
-            <!-- Recent Posts List -->
-            <ul class="list-unstyled">
-              <% @recent_posts.each_with_index do |post, index| %>
-                <li class="py-1">
-                  <%= link_to post.title, post, class: "text-secondary" %>
-                </li>
-                <% unless index == @recent_posts.length - 1 %>
-                  <li class="dropdown-divider"></li>
-                <% end %>
-              <% end %>
-            </ul>
-            <!-- End Recent Posts List -->
-          </div>
-        </div>
-        <!-- End Recent Posts -->
-
-        <!-- Categories -->
-        <div class="mb-7">
-          <h3 class="h5 mb-3">Categories</h3>
-
-          <div class="border rounded p-4">
-            <!-- Categories List -->
-            <ul class="list-unstyled">
-              <% @categories.each_with_index do |category, index| %>
-                <li class="py-1">
-                  <%= link_to category.first, posts_path(category: category.second), class: "text-secondary" %>
-                </li>
-                <% unless index == @categories.length - 1 %>
-                  <li class="dropdown-divider"></li>
-                <% end %>
-              <% end %>
-            </ul>
-            <!-- End Categories List -->
-          </div>
-        </div>
-        <!-- End Categories -->
+        <%= render 'categories' %>
       </div>
     </div>
   </div>

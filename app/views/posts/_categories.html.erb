@@ -1,0 +1,20 @@
+<!-- Categories -->
+<div class="mb-7">
+  <h3 class="h5 mb-3">Categories</h3>
+
+  <div class="border rounded p-4">
+    <!-- Categories List -->
+    <ul class="list-unstyled">
+      <% @categories.each_with_index do |category, index| %>
+        <li class="py-1">
+          <%= link_to category.first, posts_path(category: category.second), class: "text-secondary" %>
+        </li>
+        <% unless index == @categories.length - 1 %>
+          <li class="dropdown-divider"></li>
+        <% end %>
+      <% end %>
+    </ul>
+    <!-- End Categories List -->
+  </div>
+</div>
+<!-- End Categories -->

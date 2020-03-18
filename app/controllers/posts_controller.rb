@@ -19,6 +19,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @recent_posts = Post.order(:date).last(4)
+    @categories = Post.categories
   end
 
   # GET /posts/new
