@@ -23,13 +23,7 @@
 
   <%= form.hidden_field :user_id, value: current_user.id %>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
-
-  <%= form.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
-
+  <%= form.text_area :body, :class => "tinymce", :rows => 20, :cols => 120 %>
   <%= tinymce %>
 
   <div class="actions">
