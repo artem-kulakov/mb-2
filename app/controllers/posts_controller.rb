@@ -5,19 +5,19 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @recent_posts = Post.order(:date).last(4)
+    @recent_posts = Post.order(:created_at).last(4)
     @categories = Post.categories
 
     per_pages = 12
 
     if category = params[:category]
-      @posts = Post.where(category: category).page(params[:page]).per(per_pages)
+      @posts = Post.where(category: category).order(created_at: :desc).page(params[:page]).per(per_pages)
       @title = 'Posts of category ' + @categories.key(category.to_i)
     elsif user_id = params[:user]
-      @posts = Post.where(user_id: user_id).page(params[:page]).per(per_pages)
+      @posts = Post.where(user_id: user_id).order(created_at: :desc).page(params[:page]).per(per_pages)
       @title = 'All Posts of ' + User.find(user_id).full_name
     else
-      @posts = Post.page(params[:page]).per(per_pages)
+      @posts = Post.order(created_at: :desc).page(params[:page]).per(per_pages)
       @title = "All posts"
     end
   end
@@ -25,12 +25,12 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @recent_posts = Post.order(:date).last(4)
+    @recent_posts = Post.order(:created_at).last(4)
     @categories = Post.categories
 
-    @suggested_posts = Post.where(category: @post.category).order(:date).last(3)
+    @suggested_posts = Post.where(category: @post.category).order(:created_at).last(3)
     if @suggested_posts.count < 3
-      @suggested_posts = Post.order(:date).last(3)
+      @suggested_posts = Post.order(:created_at).last(3)
     end
 
     @comments = @post.comments.order(created_at: :desc)
@@ -93,6 +93,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :subtitle, :user_id, :date, :body)
+      params.require(:post).permit(:title, :subtitle, :user_id, :body)
     end
 end

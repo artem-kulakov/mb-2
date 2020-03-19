@@ -16,6 +16,6 @@ class Post < ApplicationRecord
   end
 
   def formatted_date
-    date.strftime("%B %e, %Y")
+    created_at.strftime("%B %e, %Y")
   end
 end
