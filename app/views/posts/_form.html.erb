@@ -28,6 +28,10 @@
     <%= form.text_area :body %>
   </div>
 
+  <%= form.text_area :content, :class => "tinymce", :rows => 40, :cols => 120 %>
+
+  <%= tinymce %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
