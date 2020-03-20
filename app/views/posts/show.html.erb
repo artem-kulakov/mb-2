@@ -137,6 +137,7 @@
           <ul class="list-inline d-flex">
             <li class="list-inline-item">
               <a class="text-secondary" href="#">
+                <%= link_to 'Like', comments_like_path(comment: comment), remote: true %>
                 <%= comment.likes_count %>
                 <i class="far fa-thumbs-up ml-1"></i>
               </a>
