@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'comments/like'
+  get 'comments/dislike'
   resources :posts
   
   get 'checkout/user_info'
