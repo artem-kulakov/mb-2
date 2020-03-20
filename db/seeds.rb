@@ -25,15 +25,15 @@
 #   )
 # end
 
-Post.all.each do |post|
-  post.update(
-    # image: "/assets/img/500x250/img#{1+rand(14)}.jpg",
-    # category: rand(6),
-    # hero: "/assets/img/1920x1080/img#{1+rand(39)}.jpg",
-    # body: Faker::Lorem.sentence(word_count: 400),
-    created_at: Faker::Date.backward(days: 90)
-  )
-end
+# Post.all.each do |post|
+#   post.update(
+#     # image: "/assets/img/500x250/img#{1+rand(14)}.jpg",
+#     # category: rand(6),
+#     # hero: "/assets/img/1920x1080/img#{1+rand(39)}.jpg",
+#     # body: Faker::Lorem.sentence(word_count: 400),
+#     created_at: Faker::Date.backward(days: 90)
+#   )
+# end
 
 # indexes = [1,2,3,4,14,15,16,17]
 
@@ -63,3 +63,14 @@ end
 #     body: Faker::Lorem.sentence(word_count: 10, random_words_to_add: 40)
 #   )
 # end
+
+comment_ids = (Comment.pluck(:id) * 20).shuffle
+user_ids = (User.pluck(:id) * 200).shuffle
+
+2000.times do
+  Like.create(
+    user_id: user_ids.pop,
+    comment_id: comment_ids.pop,
+    value: [true, false].sample
+  )
+end
