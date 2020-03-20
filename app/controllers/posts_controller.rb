@@ -39,6 +39,11 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+
+    @categories = {}
+    Post.categories.each do |key, value|
+      @categories[key] = key
+    end
   end
 
   # GET /posts/1/edit
@@ -93,6 +98,6 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:title, :subtitle, :user_id, :body)
+      params.require(:post).permit(:title, :subtitle, :user_id, :body, :category)
     end
 end
