@@ -3,12 +3,15 @@ class CommentsController < ApplicationController
   
   def like
     @comment_id = params[:comment]
+    comment = Comment.find(@comment_id)
 
-    Like.create(
-      user_id: current_user.id,
-      comment_id: @comment_id,
-      value: true
-    )
+    if comment.likes.where(user_id: current_user.id).count < 1
+      Like.create(
+        user_id: current_user.id,
+        comment_id: @comment_id,
+        value: true
+      )
+    end
 
     comment = Comment.find(@comment_id)
     @count = comment.likes_count
