@@ -13,20 +13,21 @@ class CommentsController < ApplicationController
       )
     end
 
-    comment = Comment.find(@comment_id)
-    @count = comment.likes_count
+    @count = comment.reload.likes_count
   end
 
   def dislike
     @comment_id = params[:comment]
-
-    Like.create(
-      user_id: current_user.id,
-      comment_id: @comment_id,
-      value: false
-    )
-
     comment = Comment.find(@comment_id)
-    @count = comment.dislikes_count
+
+    if comment.likes.where(user_id: current_user.id).count < 1
+      Like.create(
+        user_id: current_user.id,
+        comment_id: @comment_id,
+        value: false
+      )
+    end
+
+    @count = comment.reload.dislikes_count
   end
 end
