@@ -8,5 +8,10 @@ class CommentsController < ApplicationController
   end
 
   def dislike
+    Like.create(
+      user_id: current_user.id,
+      comment_id: params[:comment],
+      value: false
+    )
   end
 end
