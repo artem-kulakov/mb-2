@@ -136,18 +136,16 @@
           <!-- Likes/Reply -->
           <ul class="list-inline d-flex">
             <li class="list-inline-item">
-              <a class="text-secondary" href="#">
-                <%= link_to 'Like', comments_like_path(comment: comment), remote: true %>
-                <%= comment.likes_count %>
+              <%= link_to comments_like_path(comment: comment), remote: true, class: "text-secondary" do %>
+                <span id="<%= 'like_' + comment.id.to_s %>"><%= comment.likes_count %></span>
                 <i class="far fa-thumbs-up ml-1"></i>
-              </a>
+              <% end %>
             </li>
             <li class="list-inline-item ml-3">
-              <a class="text-secondary" href="#">
-                <%= link_to 'Dislike', comments_dislike_path(comment: comment), remote: true %>
-                <%= comment.dislikes_count %>
+              <%= link_to comments_dislike_path(comment: comment), remote: true, class: "text-secondary" do %>
+                <span id="<%= 'dislike_' + comment.id.to_s %>"><%= comment.dislikes_count %></span>
                 <i class="far fa-thumbs-down ml-1"></i>
-              </a>
+              <% end %>
             </li>
             <li class="list-inline-item ml-auto">
               <a class="text-secondary" href="#">
