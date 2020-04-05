@@ -12,34 +12,14 @@
 
           <hr class="my-4">
 
-          <!-- Product -->
-          <div class="media mb-4">
-            <div class="d-flex position-relative mr-3">
-              <img class="u-lg-avatar rounded" src="../../assets/img/100x100/img5.jpg" alt="Image Description">
+          <% current_user.products.each do |product| %>
+            <div class="media mb-4">
+              <div class="media-body">
+                <h4 class="h6 mb-0"><%= product.name %></h4>
+                <small class="d-block text-secondary">Price: $<%= product.price %></small>
+              </div>
             </div>
-            <div class="media-body">
-              <h4 class="h6 mb-0">Space shoes</h4>
-              <small class="d-block text-secondary">Size: 9</small>
-              <small class="d-block text-secondary">Quantity: 1</small>
-              <small class="d-block text-secondary">Color: Red</small>
-              <small class="d-block text-secondary">Price: $29</small>
-            </div>
-          </div>
-          <!-- End Product -->
-
-          <!-- Product -->
-          <div class="media">
-            <div class="d-flex position-relative mr-3">
-              <img class="u-lg-avatar rounded" src="../../assets/img/100x100/img13.jpg" alt="Image Description">
-            </div>
-            <div class="media-body">
-              <h4 class="h6 mb-0">Snapback cap</h4>
-              <small class="d-block text-secondary">Quantity: 1</small>
-              <small class="d-block text-secondary">Color: Orange</small>
-              <small class="d-block text-secondary">Price: $25</small>
-            </div>
-          </div>
-          <!-- End Product -->
+          <% end %>
 
           <hr class="my-4">
 
