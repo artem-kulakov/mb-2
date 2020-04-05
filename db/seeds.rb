@@ -82,12 +82,16 @@
 #   )
 # end
 
-cart = Cart.create(user_id: 2)
-products = Product.all
+# cart = Cart.create(user_id: 2)
+# products = Product.all
 
-3.times do
-  LineItem.create(
-    product: products.sample,
-    cart: cart
-  )
+# 3.times do
+#   LineItem.create(
+#     product: products.sample,
+#     cart: cart
+#   )
+# end
+
+Product.all.each do |product|
+  product.update(description: Faker::Lorem.sentence(word_count: 20))
 end
