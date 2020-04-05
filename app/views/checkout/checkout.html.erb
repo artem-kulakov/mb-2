@@ -16,7 +16,9 @@
             <div class="media mb-4">
               <div class="media-body">
                 <h4 class="h6 mb-0"><%= product.name %></h4>
-                <small class="d-block text-secondary">Price: $<%= product.price %></small>
+              </div>
+              <div class="media-body text-right">
+                <span class=""><%= number_to_currency product.price, locale: 'en-US' %></span>
               </div>
             </div>
           <% end %>
@@ -29,7 +31,7 @@
               <h4 class="h6">Total</h4>
             </div>
             <div class="media-body text-right">
-              <span class="font-weight-medium">$58.58</span>
+              <span class="font-weight-medium"><%= number_to_currency current_user.products.to_a.sum(&:price), locale: 'en-US' %></span>
             </div>
           </div>
           <!-- End Total -->
