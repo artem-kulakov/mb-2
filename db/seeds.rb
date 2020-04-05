@@ -64,13 +64,20 @@
 #   )
 # end
 
-comment_ids = (Comment.pluck(:id) * 20).shuffle
-user_ids = (User.pluck(:id) * 200).shuffle
+# comment_ids = (Comment.pluck(:id) * 20).shuffle
+# user_ids = (User.pluck(:id) * 200).shuffle
 
-2000.times do
-  Like.create(
-    user_id: user_ids.pop,
-    comment_id: comment_ids.pop,
-    value: [true, false].sample
+# 2000.times do
+#   Like.create(
+#     user_id: user_ids.pop,
+#     comment_id: comment_ids.pop,
+#     value: [true, false].sample
+#   )
+# end
+
+10.times do
+  Product.create(
+    name: Faker::Lorem.word,
+    price: Faker::Number.number(digits: 3)
   )
 end
