@@ -15,7 +15,9 @@
           <% current_user.products.each do |product| %>
             <div class="media mb-4">
               <div class="media-body">
-                <h4 class="h6 mb-0"><%= product.name %></h4>
+                <%= link_to product, style: "color: #212529;" do %>
+                  <h4 class="h6 mb-0"><%= product.name %></h4>
+                <% end %>
               </div>
               <div class="media-body text-right">
                 <span class=""><%= number_to_currency product.price, locale: 'en-US' %></span>
