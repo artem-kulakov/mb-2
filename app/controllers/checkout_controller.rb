@@ -28,7 +28,7 @@ class CheckoutController < ApplicationController
     token = params[:stripeToken]
 
     charge = Stripe::Charge.create({
-      amount: 999,
+      amount: current_user.products.to_a.sum(&:price) * 100,
       currency: 'usd',
       description: 'Example charge',
       source: token,
