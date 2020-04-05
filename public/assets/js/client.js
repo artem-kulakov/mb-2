@@ -67,11 +67,13 @@ function stripeTokenHandler(token) {
 
 // Alipay and WeChat
 $(document).ready(function() {
+  var amount = $(".payment-amount").text();
+
   // Alipay
   $( ".alipay-button" ).click(function() {
     stripe.createSource({
       type: 'alipay',
-      amount: 10999,
+      amount: amount,
       currency: 'usd',
       redirect: {
         return_url: 'http://localhost:3000/checkout/payment',
@@ -90,7 +92,7 @@ $(document).ready(function() {
     // Charge source
     stripe.createSource({
       type: 'wechat',
-      amount: 10000,
+      amount: amount,
       currency: 'usd',
       statement_descriptor: 'wechat',
       owner: {

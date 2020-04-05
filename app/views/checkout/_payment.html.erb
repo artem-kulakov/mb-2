@@ -107,6 +107,8 @@
   </div>
   <!-- End Credit Card -->
 
+  <div class="payment-amount" style="display: none;"><%= current_user.products.to_a.sum(&:price) * 100 %></div>
+
   <!-- Alipay -->
   <div id="aliPay" style="display: none; opacity: 0;" data-target-group="paymentMethods">
     <button type="submit" class="btn btn-block btn-warning mb-6 alipay-button">
