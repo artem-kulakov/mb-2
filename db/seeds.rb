@@ -75,9 +75,19 @@
 #   )
 # end
 
-10.times do
-  Product.create(
-    name: Faker::Lorem.word,
-    price: Faker::Number.number(digits: 3)
+# 10.times do
+#   Product.create(
+#     name: Faker::Lorem.word,
+#     price: Faker::Number.number(digits: 3)
+#   )
+# end
+
+cart = Cart.create(user_id: 2)
+products = Product.all
+
+3.times do
+  LineItem.create(
+    product: products.sample,
+    cart: cart
   )
 end
