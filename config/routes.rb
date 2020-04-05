@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :products
   get 'comments/like'
   get 'comments/dislike'
   resources :posts
