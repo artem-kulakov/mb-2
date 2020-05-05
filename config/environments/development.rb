@@ -64,5 +64,5 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # ngrok
-  config.hosts << "ff58f837.ngrok.io"
+  config.hosts << "7ab7e308.ngrok.io"
 end

@@ -2,6 +2,9 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments
   has_many :likes
+  has_one :cart
+  has_many :line_items, through: :cart
+  has_many :products, through: :line_items
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

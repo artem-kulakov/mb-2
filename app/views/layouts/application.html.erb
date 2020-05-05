@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/assets/vendor/animate.css/animate.min.css">
     <link rel="stylesheet" href="/assets/vendor/dzsparallaxer/dzsparallaxer.css">
     <link rel="stylesheet" href="/assets/vendor/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="/assets/vendor/slick-carousel/slick/slick.css">
 
     <!-- CSS Space Template -->
     <link rel="stylesheet" href="/assets/css/theme.css">
@@ -61,6 +62,7 @@
     <script src="/assets/vendor/dzsparallaxer/dzsparallaxer.js"></script>
     <script src="/assets/vendor/fancybox/jquery.fancybox.min.js"></script>
     <script src="/assets/vendor/instafeed.js/instafeed.min.js"></script>
+    <script src="/assets/vendor/slick-carousel/slick/slick.js"></script>
 
     <!-- JS Space -->
     <script src="/assets/js/hs.core.js"></script>
@@ -76,6 +78,7 @@
     <script src="/assets/js/components/hs.validation.js"></script>
     <script src="/assets/js/components/hs.step-form.js"></script>
     <script src="/assets/js/components/hs.instagram.js"></script>
+    <script src="/assets/js/components/hs.slick-carousel.js"></script>
 
     <!-- JS Plugins Init. -->
     <script>
@@ -118,12 +121,21 @@
         $.HSCore.components.HSMalihuScrollBar.init($('.js-scrollbar'));
 
         // initialization of autonomous popups
-        $.HSCore.components.HSModalWindow.init('[data-modal-target]', '.js-signup-modal', {
+        $.HSCore.components.HSModalWindow.init('[data-modal-target]', '.js-signup-modal', '.js-shopping-cart-size', {
           autonomous: true
         });
 
         // initialization of show animations
-        $.HSCore.components.HSShowAnimation.init('.js-animation-link');
+        $.HSCore.components.HSShowAnimation.init('.js-animation-link', {
+          afterShow: function() {
+            $('.js-slick-carousel').slick('setPosition');
+            $('#redShoeNavThumb').slick('setPosition');
+            $('#blackShoeNavThumb').slick('setPosition');
+          }
+        });
+
+        // initialization of slick carousel
+        $.HSCore.components.HSSlickCarousel.init('.js-slick-carousel');
 
         // initialization of fancybox
         $.HSCore.components.HSFancyBox.init('.js-fancybox');

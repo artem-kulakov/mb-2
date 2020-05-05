@@ -12,76 +12,18 @@
 
           <hr class="my-4">
 
-          <!-- Product -->
-          <div class="media mb-4">
-            <div class="d-flex position-relative mr-3">
-              <img class="u-lg-avatar rounded" src="../../assets/img/100x100/img5.jpg" alt="Image Description">
+          <% current_user.products.each do |product| %>
+            <div class="media mb-4">
+              <div class="media-body">
+                <%= link_to product, style: "color: #212529;" do %>
+                  <h4 class="h6 mb-0"><%= product.name %></h4>
+                <% end %>
+              </div>
+              <div class="media-body text-right">
+                <span class=""><%= number_to_currency product.price, locale: 'en-US' %></span>
+              </div>
             </div>
-            <div class="media-body">
-              <h4 class="h6 mb-0">Space shoes</h4>
-              <small class="d-block text-secondary">Size: 9</small>
-              <small class="d-block text-secondary">Quantity: 1</small>
-              <small class="d-block text-secondary">Color: Red</small>
-              <small class="d-block text-secondary">Price: $29</small>
-            </div>
-          </div>
-          <!-- End Product -->
-
-          <!-- Product -->
-          <div class="media">
-            <div class="d-flex position-relative mr-3">
-              <img class="u-lg-avatar rounded" src="../../assets/img/100x100/img13.jpg" alt="Image Description">
-            </div>
-            <div class="media-body">
-              <h4 class="h6 mb-0">Snapback cap</h4>
-              <small class="d-block text-secondary">Quantity: 1</small>
-              <small class="d-block text-secondary">Color: Orange</small>
-              <small class="d-block text-secondary">Price: $25</small>
-            </div>
-          </div>
-          <!-- End Product -->
-
-          <hr class="my-4">
-
-          <!-- Title -->
-          <div class="mb-3">
-            <h4 class="h6 mb-0">Have a voucher?</h4>
-            <small class="text-secondary">Apply your voucher below.</small>
-          </div>
-          <!-- End Title -->
-
-          <!-- Input -->
-          <form class="js-focus-state input-group input-group-sm form form--sm">
-            <input type="search" class="form-control form__input"
-                   placeholder="Voucher"
-                   aria-label="Voucher">
-            <div class="input-group-append">
-              <button type="button" class="btn btn-sm btn-primary">Apply</button>
-            </div>
-          </form>
-          <!-- End Input -->
-
-          <hr class="my-4">
-
-          <!-- Total -->
-          <div class="media align-items-center mb-2">
-            <div class="mr-3">
-              <h4 class="h6 text-muted font-weight-normal mb-0">Subtotal</h4>
-            </div>
-            <div class="media-body text-right">
-              <span>$54</span>
-            </div>
-          </div>
-
-          <div class="media align-items-center">
-            <div class="mr-3">
-              <h4 class="h6 text-muted font-weight-normal mb-0">Shipping</h4>
-            </div>
-            <div class="media-body text-right">
-              <span>$4.58</span>
-            </div>
-          </div>
-          <!-- End Total -->
+          <% end %>
 
           <hr class="my-4">
 
@@ -91,7 +33,7 @@
               <h4 class="h6">Total</h4>
             </div>
             <div class="media-body text-right">
-              <span class="font-weight-medium">$58.58</span>
+              <span class="font-weight-medium"><%= number_to_currency current_user.products.to_a.sum(&:price), locale: 'en-US' %></span>
             </div>
           </div>
           <!-- End Total -->

@@ -64,13 +64,34 @@
 #   )
 # end
 
-comment_ids = (Comment.pluck(:id) * 20).shuffle
-user_ids = (User.pluck(:id) * 200).shuffle
+# comment_ids = (Comment.pluck(:id) * 20).shuffle
+# user_ids = (User.pluck(:id) * 200).shuffle
 
-2000.times do
-  Like.create(
-    user_id: user_ids.pop,
-    comment_id: comment_ids.pop,
-    value: [true, false].sample
-  )
+# 2000.times do
+#   Like.create(
+#     user_id: user_ids.pop,
+#     comment_id: comment_ids.pop,
+#     value: [true, false].sample
+#   )
+# end
+
+# 10.times do
+#   Product.create(
+#     name: Faker::Lorem.word,
+#     price: Faker::Number.number(digits: 3)
+#   )
+# end
+
+# cart = Cart.create(user_id: 2)
+# products = Product.all
+
+# 3.times do
+#   LineItem.create(
+#     product: products.sample,
+#     cart: cart
+#   )
+# end
+
+Product.all.each do |product|
+  product.update(description: Faker::Lorem.sentence(word_count: 20))
 end
