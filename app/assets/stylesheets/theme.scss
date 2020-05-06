@@ -2,10 +2,10 @@
 @import '../vendor/bootstrap/scss/functions';
 
 // Space setup
-@import 'space/variables';
+@import '../vendor/space/variables';
 
 // Custom setup
-@import 'user-variables';
+@import '../vendor/user-variables';
 
 // Bootstrap core
 @import '../vendor/bootstrap/scss/bootstrap';
@@ -16,7 +16,7 @@
   * Licensed under Bootstrap Themes (https://themes.getbootstrap.com/licenses/)
 ------------------------------------------------------------------------*/
 
-@import 'space/space';
+@import '../vendor/space/space';
 
 // Custom core
-@import 'user';
+@import '../vendor/user';
