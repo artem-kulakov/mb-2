@@ -90,7 +90,7 @@ $theme-colors: map-merge((
 
 
 // Custom setup
-@import "app/assets/stylesheets/scssesheets/scss/user-variables";
+@import "../user-variables";
 
 
 
