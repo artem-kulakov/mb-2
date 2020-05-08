@@ -1,464 +1,46 @@
 <!-- ========== MAIN CONTENT ========== -->
 <main id="content">
+
   <!-- Hero Section -->
-  <div class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll" data-options='{direction: "normal"}'>
-    <!-- Apply your Parallax background image here -->
-    <div class="divimage dzsparallaxer--target gradient-overlay-half-white-v1 bg-img-hero" style="height: 120%; background-image: url(../../assets/img/1920x1080/img19.jpg);"></div>
-
-    <div class="container position-relative z-index-2 space-2-top space-3-bottom space-4--lg">
-      <div class="row justify-content-lg-between align-items-lg-center">
-        <div class="col-lg-6 mb-9 mb-lg-0">
-          <!-- Description -->
-          <div class="mb-5">
-            <span class="d-block text-uppercase mb-2">It is an</span>
-            <h1 class="display-4 font-size-48--md-down">Easy business with Space template</h1>
-          </div>
-          <a class="btn btn-primary" href="https://themes.getbootstrap.com/product/space-multipurpose-responsive-template/">Get Started with Space</a>
-          <!-- End Description -->
-        </div>
-
-        <div class="col-lg-3 text-center">
-          <!-- Fancybox -->
-          <a class="js-fancybox u-media-player" href="javascript:;"
-             data-src="//vimeo.com/167434033"
-             data-speed="700"
-             data-animate-in="zoomIn"
-             data-animate-out="zoomOut"
-             data-caption="Space - Responsive Website Template">
-            <span class="u-media-player__icon u-media-player__icon--xl">
-              <i class="fa fa-play u-media-player__icon-inner"></i>
-            </span>
-            <span class="d-block lead text-white mt-2">Play intro video</span>
-          </a>
-          <!-- End Fancybox -->
-        </div>
-      </div>
-    </div>
-  </div>
+  <%#= render 'components/modern_digital/hero' %>
+  <%#= render 'components/modern_agency/hero' %>
+  <%= render 'components/modern_business/hero' %>
+  <%#= render 'components/creative_business/hero' %>
   <!-- End Hero Section -->
 
-  <!-- Features Section -->
-  <div class="container position-relative z-index-2">
-    <div class="bg-gray-100 shadow-lg rounded mt-n9">
-      <div class="card-deck d-block d-lg-flex card-lg-gutters-1">
-        <div class="card border-0 mb-2">
-          <!-- Listing -->
-          <div class="card-body p-4">
-            <div class="media">
-              <img class="max-width-9 mb-2" src="../../assets/svg/components/consult-cyan-icon.svg" alt="Image Description">
-              <div class="media-body px-4">
-                <h2 class="h6 text-dark mb-1">Consult</h2>
-                <p class="mb-0">This is where we sit down, grab a cup of coffee and dial in the details.</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Listing -->
-        </div>
 
-        <div class="card border-0 mb-2">
-          <!-- Listing -->
-          <div class="card-body p-4">
-            <div class="media">
-              <img class="max-width-9 mb-2" src="../../assets/svg/components/plan-brown-icon.svg" alt="Image Description">
-              <div class="media-body px-4">
-                <h3 class="h6 text-dark mb-1">Plan</h3>
-                <p class="mb-0">Now that we've aligned the details, it's time to get things mapped out and organized.</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Listing -->
-        </div>
 
-        <div class="card border-0 mb-2">
-          <!-- Listing -->
-          <div class="card-body p-4">
-            <div class="media">
-              <img class="max-width-9 mb-2" src="../../assets/svg/components/create-blue-icon.svg" alt="Image Description">
-              <div class="media-body px-4">
-                <h4 class="h6 text-dark mb-1">Create</h4>
-                <p class="mb-0">The time has come to bring those ideas and plans to life.</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Listing -->
-        </div>
-      </div>
+  <!-- CTA Section -->
+  <%#= render 'components/modern_business/cta' %>
+  <!-- End CTA Section -->
 
-      <div class="card-deck d-block d-lg-flex card-lg-gutters-1">
-        <div class="card border-0 mb-2 mb-lg-0">
-          <!-- Listing -->
-          <div class="card-body p-4">
-            <div class="media">
-              <img class="max-width-9 mb-2" src="../../assets/svg/components/develop-purple-icon.svg" alt="Image Description">
-              <div class="media-body px-4">
-                <h4 class="h6 text-dark mb-1">Develop</h4>
-                <p class="mb-0">Whether through commerce or just an experience to tell your brand's story.</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Listing -->
-        </div>
+  <!-- Testimonials Section -->
+  <%= render 'components/classic_agency/testimonials' %>
+  <!-- End Testimonials Section -->
 
-        <div class="card border-0 mb-2 mb-lg-0">
-          <!-- Listing -->
-          <div class="card-body p-4">
-            <div class="media">
-              <img class="max-width-9 mb-2" src="../../assets/svg/components/rocket-red-icon.svg" alt="Image Description">
-              <div class="media-body px-4">
-                <h4 class="h6 text-dark mb-1">Release</h4>
-                <p class="mb-0">Now that your brand is all dressed up and ready to party.</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Listing -->
-        </div>
-
-        <div class="card border-0 mb-0">
-          <!-- Listing -->
-          <div class="card-body p-4">
-            <div class="media">
-              <img class="max-width-9 mb-2" src="../../assets/svg/components/data-analysis-dark-icon.svg" alt="Image Description">
-              <div class="media-body px-4">
-                <h4 class="h6 text-dark mb-1">Maintain</h4>
-                <p class="mb-0">We get it, you're busy and it's important that someone keeps up with marketing.</p>
-              </div>
-            </div>
-          </div>
-          <!-- End Listing -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Features Section -->
+  <!-- Services Section -->
+  <%= render 'components/creative_business/features' %>
+  <!-- END Services Section -->
 
   <!-- Stats Section -->
-  <div class="container space-2 space-3--lg">
-    <div class="row justify-content-md-center">
-      <div class="col-6 col-md-5 col-lg-4">
-        <!-- Stats -->
-        <div class="text-center">
-          <span class="display-4 d-block text-dark mb-2">7k+</span>
-          <p class="lead">Covered support questions</p>
-        </div>
-        <!-- End Stats -->
-      </div>
-
-      <div class="col-6 col-md-5 col-lg-4">
-        <!-- Stats -->
-        <div class="text-center">
-          <span class="display-4 d-block text-dark mb-2">1.2k+</span>
-          <p class="lead">Reusable UI components</p>
-        </div>
-        <!-- End Stats -->
-      </div>
-    </div>
-  </div>
+  <%#= render 'components/creative_business/stats' %>
   <!-- End Stats Section -->
 
-  <!-- Works Section -->
-  <div class="bg-gray-100">
-    <div class="container space-2 space-3--lg">
-      <!-- Title -->
-      <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-9">
-        <span class="u-label u-label--sm u-label--purple mb-3">We've done some amazing jobs</span>
-        <h2 class="h3">Experience a level of quality in both design & customization.</h2>
-      </div>
-      <!-- End Title -->
+  <!-- Products Section -->
+  <%= render 'components/shop/fetured_products' %>
+  <!-- End Products Section -->
+  <%#= render 'components/modern_business/testimonial' %>
 
-      <div class="card-deck d-block d-lg-flex card-lg-gutters-2">
-        <div class="card border-0 mb-3">
-          <!-- Works -->
-          <div class="card-body border border-bottom-0 rounded-top text-center p-5">
-            <img class="u-md-avatar rounded mb-4" src="../../assets/img/160x160/img3.jpg" alt="Image Description">
-            <h4 class="h5 mb-1">Slack</h4>
-            <p class="mb-0">A cloud-based set of proprietary team collaboration tools and services.</p>
-          </div>
 
-          <div class="card-footer text-center border rounded-bottom p-5">
-            <h4 class="h6 text-secondary">Contributors</h4>
 
-            <!-- Contributors List -->
-            <ul class="list-inline mr-2 mb-4">
-              <li class="list-inline-item mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img1.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img3.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img4.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img5.jpg" alt="Image Description">
-              </li>
-            </ul>
-            <!-- End Contributors List -->
 
-            <a class="btn btn-sm btn-primary btn-wide" href="../portfolio/case-studies-simple.html">Learn More</a>
-          </div>
-          <!-- End Works -->
-        </div>
 
-        <div class="card border-0 mb-3">
-          <!-- Works -->
-          <div class="card-body border border-bottom-0 rounded-top text-center p-5">
-            <img class="u-md-avatar rounded mb-4" src="../../assets/img/160x160/img4.jpg" alt="Image Description">
-            <h4 class="h5 mb-1">Mapbox</h4>
-            <p class="mb-0">A large provider of custom online maps for websites and applications.</p>
-          </div>
 
-          <div class="card-footer text-center border rounded-bottom p-5">
-            <h4 class="h6 text-secondary">Contributors</h4>
 
-            <!-- Contributors List -->
-            <ul class="list-inline mr-2 mb-4">
-              <li class="list-inline-item mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img2.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img4.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img5.jpg" alt="Image Description">
-              </li>
-            </ul>
-            <!-- End Contributors List -->
 
-            <a class="btn btn-sm btn-primary btn-wide" href="../portfolio/case-studies-simple.html">Learn More</a>
-          </div>
-          <!-- End Works -->
-        </div>
 
-        <div class="card border-0 mb-3">
-          <!-- Works -->
-          <div class="card-body border border-bottom-0 rounded-top text-center p-5">
-            <img class="u-md-avatar rounded mb-4" src="../../assets/img/160x160/img5.jpg" alt="Image Description">
-            <h4 class="h5 mb-1">Spotify</h4>
-            <p class="mb-0">An entertainment service, specialized in music, podcast, and video streaming service.</p>
-          </div>
-
-          <div class="card-footer text-center border rounded-bottom p-5">
-            <h4 class="h6 text-secondary">Contributors</h4>
-
-            <!-- Contributors List -->
-            <ul class="list-inline mr-2 mb-4">
-              <li class="list-inline-item mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img1.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img5.jpg" alt="Image Description">
-              </li>
-            </ul>
-            <!-- End Contributors List -->
-
-            <a class="btn btn-sm btn-primary btn-wide" href="../portfolio/case-studies-simple.html">Learn More</a>
-          </div>
-          <!-- End Works -->
-        </div>
-      </div>
-
-      <div class="card-deck d-block d-lg-flex card-lg-gutters-2">
-        <div class="card border-0 mb-3 mb-lg-0">
-          <!-- Works -->
-          <div class="card-body border border-bottom-0 rounded-top text-center p-5">
-            <img class="u-md-avatar rounded mb-4" src="../../assets/img/160x160/img2.jpg" alt="Image Description">
-            <h4 class="h5 mb-1">Airbnb</h4>
-            <p class="mb-0">An online marketplace and hospitality service for people to lease or rent short-term lodging.</p>
-          </div>
-
-          <div class="card-footer text-center border rounded-bottom p-5">
-            <h4 class="h6 text-secondary">Contributors</h4>
-
-            <!-- Contributors List -->
-            <ul class="list-inline mr-2 mb-4">
-              <li class="list-inline-item mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img1.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img3.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img2.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img4.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img5.jpg" alt="Image Description">
-              </li>
-            </ul>
-            <!-- End Contributors List -->
-
-            <a class="btn btn-sm btn-primary btn-wide" href="../portfolio/case-studies-simple.html">Learn More</a>
-          </div>
-          <!-- End Works -->
-        </div>
-
-        <div class="card border-0 mb-3 mb-lg-0">
-          <!-- Works -->
-          <div class="card-body border border-bottom-0 rounded-top text-center p-5">
-            <img class="u-md-avatar rounded mb-4" src="../../assets/img/160x160/img6.jpg" alt="Image Description">
-            <h4 class="h5 mb-1">DigitalOcean</h4>
-            <p class="mb-0">Providing developers and businesses a reliable, easy-to-use cloud computing platform of virtual servers.</p>
-          </div>
-
-          <div class="card-footer text-center border rounded-bottom p-5">
-            <h4 class="h6 text-secondary">Contributors</h4>
-
-            <!-- Contributors List -->
-            <ul class="list-inline mr-2 mb-4">
-              <li class="list-inline-item mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img3.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img2.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img4.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img5.jpg" alt="Image Description">
-              </li>
-            </ul>
-            <!-- End Contributors List -->
-
-            <a class="btn btn-sm btn-primary btn-wide" href="../portfolio/case-studies-simple.html">Learn More</a>
-          </div>
-          <!-- End Works -->
-        </div>
-
-        <div class="card border-0">
-          <!-- Works -->
-          <div class="card-body border border-bottom-0 rounded-top text-center p-5">
-            <img class="u-md-avatar rounded mb-4" src="../../assets/img/160x160/img1.jpg" alt="Image Description">
-            <h4 class="h5 mb-1">InVision</h4>
-            <p class="mb-0">InVision is the digital product design platform used to make the world's best customer experiences.</p>
-          </div>
-
-          <div class="card-footer text-center border rounded-bottom p-5">
-            <h4 class="h6 text-secondary">Contributors</h4>
-
-            <!-- Contributors List -->
-            <ul class="list-inline mr-2 mb-4">
-              <li class="list-inline-item mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img1.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img3.jpg" alt="Image Description">
-              </li>
-              <li class="list-inline-item ml-n3 mr-0">
-                <img class="img-fluid u-sm-avatar u-sm-avatar--bordered rounded-circle" src="../../assets/img/32x32/img5.jpg" alt="Image Description">
-              </li>
-            </ul>
-            <!-- End Contributors List -->
-
-            <a class="btn btn-sm btn-primary btn-wide" href="../portfolio/case-studies-simple.html">Learn More</a>
-          </div>
-          <!-- End Works -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Works Section -->
-
-  <!-- About Section -->
-  <div class="container space-2 space-3--lg">
-    <!-- Title -->
-    <div class="w-md-80 w-lg-60 text-center mx-md-auto mb-9">
-      <span class="u-label u-label--sm u-label--purple mb-3">What is Space?</span>
-      <h1 class="h3">Build for everyone and provides enjoyable usage</h1>
-      <p>Experience a level of our quality in both design &amp; customization works.</p>
-    </div>
-    <!-- End Title -->
-
-    <div class="row align-items-lg-center">
-      <div class="col-md-6 order-md-2 mb-5 mb-md-0">
-        <div class="mb-4">
-          <!-- Title -->
-          <h2>Template that bring businesses together</h2>
-          <p>Working together on the daily requires each individual to let the greater good of the team's work surface above their own ego.</p>
-          <!-- End Title -->
-
-          <!-- Features List -->
-          <ul class="text-secondary">
-            <li class="py-1">It's important to stay detail oriented with every project we tackle.</li>
-            <li class="py-1">Staying focused allows us to turn every project we complete into something we love.</li>
-          </ul>
-          <!-- End Features List -->
-
-          <hr class="my-5">
-
-          <!-- Review -->
-          <div class="media">
-            <img class="u-avatar rounded-circle mr-3" src="../../assets/img/100x100/img4.jpg" alt="Image Description">
-            <div class="media-body">
-              <h4 class="h6 mb-0">Mark McManus</h4>
-              <p class="mb-0">"We are incredibly impressed with Space and how well it supports its customers with amazing products and services. One simple subscription gives you access to all our tools, plus so much more."</p>
-            </div>
-          </div>
-          <!-- End Review -->
-        </div>
-      </div>
-
-      <div class="col-md-6 order-md-1">
-        <div class="pr-lg-4">
-          <img class="img-fluid" src="../../assets/img/700x700/img1.jpg" alt="Image Description">
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End About Section -->
-
-  <!-- Responsive Section -->
-  <div class="gradient-overlay-half-primary-v1">
-    <div class="bg-img-hero" style="background-image: url(../../assets/img/bg/bg2.png);">
-      <div class="container">
-        <div class="row justify-content-lg-between align-items-lg-start">
-          <div class="col-lg-6 space-2 space-3--lg">
-            <!-- Title -->
-            <div class="mb-7">
-              <span class="u-label u-label--sm u-label--light mb-2">Space on the go</span>
-              <h2 class="text-white">Space on mobile</h2>
-              <p class="text-white">Don't miss out because you're on the move. Stay connected and collaborate with your team from anywhere with notifications, comments, and project activity. Download Space for iPhone or Space for Android.</p>
-            </div>
-            <!-- End Title -->
-
-            <!-- Button -->
-            <button type="button" class="btn btn-xs btn-dark text-left mb-2 mb-md-0 mr-md-2">
-              <span class="media align-items-center">
-                <i class="fab fa-apple fa-3x mr-3"></i>
-                <span class="d-block">
-                  <span class="d-block">Download on the</span>
-                  <strong class="d-block font-size-14">App Store</strong>
-                </span>
-              </span>
-            </button>
-            <!-- End Button -->
-
-            <!-- Button -->
-            <button type="button" class="btn btn-xs btn-dark text-left mb-2 mb-md-0">
-              <span class="media align-items-center">
-                <i class="fab fa-google-play fa-3x mr-3"></i>
-                <span class="d-block">
-                  <span class="d-block">Get it on</span>
-                  <strong class="d-block font-size-14">Google Play</strong>
-                </span>
-              </span>
-            </button>
-            <!-- End Button -->
-          </div>
-
-          <div class="col-lg-4 text-center mt-lg-auto">
-            <!-- SVG Mockup -->
-            <object type="image/svg+xml" data="../../assets/svg/mockups/phone-mockup-1.svg" class="w-75 w-sm-100 max-width-sm-40"></object>
-            <!-- End SVG Mockup -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- End Responsive Section -->
 </main>
+
 <!-- ========== END MAIN CONTENT ========== -->
 
 <!-- ========== SECONDARY CONTENTS ========== -->
@@ -809,7 +391,7 @@
           <div class="col-sm-6 mb-2 mb-sm-0">
             <button type="button" class="btn btn-block btn-facebook text-nowrap">
               <i class="fab fa-facebook-f mr-2"></i>
-              Signup with Facebook
+              Signup with Facebookw
             </button>
           </div>
           <div class="col-sm-6">
@@ -830,9 +412,8 @@
           <h2 class="h4 mb-0">Recover account</h2>
           <p>Enter your email address and an email with instructions will be sent to you.</p>
         </header>
-        <!-- End Title -->
-
-        <!-- Input -->
+        <!-- End Title --><!-- Input -->
+        <!-- End Title --><!-- Input -->
         <div class="js-form-message mb-3">
           <div class="js-focus-state input-group form">
             <div class="input-group-prepend form__prepend">

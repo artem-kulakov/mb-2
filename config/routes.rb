@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :services
   resources :products
   get 'comments/like'
   get 'comments/dislike'
+
   resources :posts
   
   get 'checkout/user_info'
